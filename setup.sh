@@ -3,6 +3,9 @@
 # harta tahta hanya sementara ingat masih ada kehidupan setelah kematian
 # jangan lupa sholat
 clear
+IP=$(wget -qO- ipinfo.io/ip);
+domain=$(cat /etc/xray/domain)
+date=$(date +"%Y-%m-%d")
 red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
@@ -192,8 +195,9 @@ fi
 curl -sS ipv4.icanhazip.com > /etc/myipvps
 echo ""
 echo "==========================="  | tee -a log-install.txt
-echo "IP VPS :
+echo "IP VPS :$ip_vps"
 echo "SCRIPT BY RVPN PREMIUM"
+echo "DATE :$DATE2"
 echo "============================" | tee e -a log-install.txt
 echo -e ""
 echo ""
