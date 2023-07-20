@@ -124,6 +124,39 @@ wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/ssh-vpn.sh
 sleep 0.5
 clear
 wget https://raw.githubusercontent.com/Rerechan02/UDP/main/udp.sh && chmod +x udp.sh && ./udp.sh
+#install limit
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-trojan-grpc
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-trojan-tcp
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-trojan-ws
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-grpc
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-ws
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vless-ws
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vless-grpc
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-ws-orbit
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-ws-orbit1
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-ssh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-trojan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-vless
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-vmess
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-quota-trojan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-quota-vmess
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-quota-vless
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/list-ssh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/list-vmess
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/list-vless
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/list-trojan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-ssh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-vmess
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-vless
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-trojan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/loop
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/matikan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-ssh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-trojan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-vless
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-vmess
 #Instal Xray
 echo -e "\e[33m-----------------------------------\033[0m"
 echo -e "$BGreen          Install XRAY              $NC"
