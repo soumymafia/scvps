@@ -1,4 +1,10 @@
 #!/bin/bash
+#link izin ip vps
+url_izin='https://raw.githubusercontent.com/rizkyckj/izinip/master/ip'
+#IP VPS
+MYIP=$(curl -sS ifconfig.me)
+# Mendapatkan isi file izin.txt dari URL
+izin=$(curl -s "$url_izin")
 MYIP=$(curl -sS ifconfig.me)
 echo "Checking VPS"
 clear
