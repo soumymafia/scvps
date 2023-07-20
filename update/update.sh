@@ -11,4 +11,5 @@ wget -O clearcache "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master
 wget -O m-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-ssws.sh"
 wget -O m-trojan "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-trojan.sh"
 wget -O m-system "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-system.sh"
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-vmess
 sleep 2
