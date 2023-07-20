@@ -26,7 +26,7 @@ case $opt in
 2) clear ; trialvmess ; exit ;;
 3) clear ; renew-ws ; exit ;;
 4) clear ; del-ws ; exit ;;
-5) clear ; cekvmess ; exit ;;
+5) clear ; cek-ws ; exit ;;
 6) clear ; cat /etc/log-create-vmess.log ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
