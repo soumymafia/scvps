@@ -114,7 +114,7 @@ clear
 
     
 #update vps
-apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
+apt update -y && apt upgrade -y && apt dist-upgrade -y
 #install ssh ovpn
 echo -e "\e[33m-----------------------------------\033[0m"
 echo -e "$BGreen      Install SSH Websocket           $NC"
