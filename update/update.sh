@@ -20,4 +20,5 @@ wget -O add-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xra
 wget -O trialvmess "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/trialvmess.sh" && chmod +x trialvmess
 wget -O renew-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-ws.sh" && chmod +x renew-ws
 wget -O del-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/del-ws.sh" && chmod +x del-ws
+wget -O cek-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/cek-ws.sh" && chmod +x cek-ws
 sleep 2
