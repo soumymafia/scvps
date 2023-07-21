@@ -14,11 +14,27 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[0;41;36m           TROJAN ACCOUNT          \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+read -p "Username         : " user
+read -p "Quota (GB)       : " quota
+read -p "Max Ip login     : " iplimit
+read -p "Masaaktif        : " masaaktif
+#QUOTA
+if [[ $quota -gt 0 ]]; then
+echo -e "$[$quota * 1024 * 1024 * 1024]" > /etc/funny/limit/trojan/quota/$user
+else
+echo > /dev/null
+fi
 
-		read -rp "User: " -e user
-		user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
+#IPLIMIT
+if [[ $iplimit -gt 0 ]]; then
+echo -e "$iplimit" > /etc/funny/limit/trojan/ip/$user
+else
+echo > /dev/null
+fi
+		
+    user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
-		if [[ ${user_EXISTS} == '1' ]]; then
+    if [[ ${user_EXISTS} == '1' ]]; then
 clear
 		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 		echo -e "\E[0;41;36m           TROJAN ACCOUNT          \E[0m"
