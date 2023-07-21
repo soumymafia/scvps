@@ -326,6 +326,8 @@ wget -O m-tcp "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu
 wget -O xp "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/xp.sh"
 wget -O sshws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/sshws.sh"
 wget -O m-dns "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-dns.sh"
+wget -O backup "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/restore.sh"
 
 chmod +x menu
 chmod +x m-vmess
@@ -362,6 +364,8 @@ chmod +x m-tcp
 chmod +x xp
 chmod +x sshws
 chmod +x m-dns
+chmod +x backup
+chmod +x restore
 cd
 
 
