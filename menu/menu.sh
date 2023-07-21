@@ -169,8 +169,7 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• VPS PANEL MENU •${NC} $COLOR1 $NC"                   
-echo -e "                        VPS INFO" | lolcat 
+echo -e "$COLOR1 ${NC} ${COLBG1}${WH}               VPS PANEL MENU ${NC} $COLOR1 $NC"                   
 echo -e ""
 echo -e "OS            \e[0m: "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "Uptime        \e[0m: $uptime"
@@ -181,7 +180,7 @@ echo -e "Country       \e[0m: $LOC"
 echo -e "DOMAIN        \e[0m: $domain"	
 echo -e "DATE & TIME   \e[0m: $DATE2"
 echo "┌──────────────────────────────────────┐"
-echo "│NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"                                             │                                                                      │
+echo "│   NGINX : $resngx""  ""XRAY : $resv2r"                                             │                                                                      │
 echo "└──────────────────────────────────────┘"
 echo -e ""
 echo -e "                         MENU" | lolcat
