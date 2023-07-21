@@ -1,62 +1,69 @@
 #!/bin/bash
-# Color
-RED='\033[0;31m'
-NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-# ==========================================
-# Getting
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+###########- COLOR CODE -##############
+colornow=$(cat /etc/ssnvpn/theme/color.conf)
+NC="\e[0m"
+# // Exporting Language to UTF-8
+BIBlack='\033[1;90m'      # Black
+BIRed='\033[1;91m'        # Red
+BIGreen='\033[1;92m'      # Green
+BIYellow='\033[1;93m'     # Yellow
+BIBlue='\033[1;94m'       # Blue
+BIPurple='\033[1;95m'     # Purple
+BICyan='\033[1;96m'       # Cyan
+BIWhite='\033[1;97m'      # White
+UWhite='\033[4;37m'       # White
+On_IPurple='\033[0;105m'  #
+On_IRed='\033[0;101m'
+IBlack='\033[0;90m'       # Black
+IRed='\033[0;91m'         # Red
+IGreen='\033[0;92m'       # Green
+IYellow='\033[0;93m'      # Yellow
+IBlue='\033[0;94m'        # Blue
+IPurple='\033[0;95m'      # Purple
+ICyan='\033[0;96m'        # Cyan
+IWhite='\033[0;97m'       # White
+NC='\e[0m'
+###########- END COLOR CODE -##########
+clear 
+MYIP=$(curl -sS ipv4.icanhazip.com)
 clear
-IP=$(wget -qO- ipinfo.io/ip);
-date=$(date +"%Y-%m-%d")
-clear
-email=$(cat /home/email)
-if [[ "$email" = "" ]]; then
-echo "Masukkan Email Untuk Menerima Backup"
-read -rp "Email : " -e email
-cat <<EOF>>/home/email
-$email
-EOF
-fi
-clear
-echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
-rm -rf /root/backup
-mkdir /root/backup
-cp /etc/passwd backup/
-cp /etc/group backup/
-cp /etc/shadow backup/
-cp /etc/gshadow backup/
-cp /etc/crontab backup/
-cp -r /var/lib/alexxa-pro/ backup/alexxa-pro
-cp -r /etc/xray backup/xray
-cp -r /home/vps/public_html backup/public_html
-cd /root
-zip -r $IP-$date.zip backup > /dev/null 2>&1
-rclone copy /root/$IP-$date.zip dr:backup/
-url=$(rclone link dr:backup/$IP-$date.zip)
-id=(`echo $url | grep '^https' | cut -d'=' -f2`)
-link="https://drive.google.com/u/4/uc?id=${id}&export=download"
-echo -e "
-Detail Backup 
-==================================
-IP VPS        : $IP
-Link Backup   : $link
-Tanggal       : $date
-==================================
-" | mail -s "Backup Data" $email
-rm -rf /root/backup
-rm -r /root/$IP-$date.zip
-clear
-echo -e "
-Detail Backup 
-==================================
-IP VPS        : $IP
-Link Backup   : $link
-Tanggal       : $date
-==================================
-"
-echo "BACKUP BERHASIL SILAHKAN SALIN LINK DIATAS"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC} ${COLBG1}             • RESTOR PANEL MENU •             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+[[ "$cekdata" = "404" ]] && {
+red "│  [INFO] Data not found / you never backup"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo ""
+read -n 1 -s -r -p "   Press any key to back on menu"
+menu
+} || {
+echo "│  [INFO] Data found for username $nama"
+}
+
+echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restore Data..."
+read -rp "│  Password File: " -e InputPass
+echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Downloading data.."
+wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/Rerechan02/backup/main/$nama/$nama.zip" &> /dev/null
+echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Getting your data..."
+unzip -P $InputPass /root/backup/backup.zip &> /dev/null
+echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Starting to restore data..."
+sleep 1
+rm -f /root/backup/backup.zip &> /dev/null
+echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restoring passwd data..."
+sleep 1
+cp /root/backup/passwd /etc/ &> /dev/null
+echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restoring admin data..."
+sleep 1
+cp -r /root/backup/xray /etc/ &> /dev/null
+cp -r /root/backup/trojan-go /etc/
+rm -rf /root/backup &> /dev/null
+echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Done... Successfully - Script By Rerechan02"
+sleep 1
+rm -f /root/backup/backup.zip &> /dev/null
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo ""
+read -n 1 -s -r -p "   Press any key to reboot"
+reboot
