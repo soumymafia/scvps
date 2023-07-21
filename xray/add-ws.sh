@@ -15,26 +15,11 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\\E[0;41;36m      Add Vmess Account      \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-read -p "Username         : " user
-read -p "Quota (GB)       : " quota
-read -p "Max Ip login     : " iplimit
-read -p "Masaaktif        : " masaaktif
-#QUOTA
-if [[ $quota -gt 0 ]]; then
-echo -e "$[$quota * 1024 * 1024 * 1024]" > /etc/funny/limit/vmess/quota/$user
-else
-echo > /dev/null
-fi
-#IPLIMIT
-if [[ $iplimit -gt 0 ]]; then
-echo -e "$iplimit" > /etc/funny/limit/vmess/ip/$user
-else
-echo > /dev/null
-fi
 
-    CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
+		read -rp "User: " -e user
+		CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
-    if [[ ${CLIENT_EXISTS} == '1' ]]; then
+		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
             echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
             echo -e "\\E[0;41;36m      Add Vmess Account      \E[0m"
