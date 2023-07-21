@@ -169,16 +169,18 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "$COLOR1 ${NC} ${COLBG1}${WH}               VPS PANEL MENU ${NC} $COLOR1 $NC"                   
+echo -e "$COLOR1 ${NC} ${COLBG1}${WH}             VPS PANEL MENU ${NC} $COLOR1 $NC"                   
 echo -e ""
-echo -e "OS            \e[0m: "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
-echo -e "Uptime        \e[0m: $uptime"
-echo -e "Public IP     \e[0m: $IPVPS"
-echo -e "Country       \e[0m: $LOC"
-#echo -e "ASN           \e[0m: $ISP"
-#echo -e "CITY          \e[0m: $CITY"
-echo -e "DOMAIN        \e[0m: $domain"	
-echo -e "DATE & TIME   \e[0m: $DATE2"
+echo "┌──────────────────────────────────────┐"
+echo "|OS            \e[0m: "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
+echo "│Uptime        \e[0m: $uptime"
+echo "|Public IP     \e[0m: $IPVPS"
+echo "│Country       \e[0m: $LOC"
+#echo"│ASN           \e[0m: $ISP"
+#echo"│CITY          \e[0m: $CITY"
+echo "│DOMAIN        \e[0m: $domain"	
+echo "│DATE & TIME   \e[0m: $DATE2"
+echo "└──────────────────────────────────────┘"
 echo "┌──────────────────────────────────────┐"
 echo "│   NGINX : $resngx""  ""XRAY : $resv2r"                                             │                                                                      │
 echo "└──────────────────────────────────────┘"
