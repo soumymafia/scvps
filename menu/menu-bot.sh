@@ -3,8 +3,8 @@
 #install
 apt update && apt upgrade
 apt install python3 python3-pip git
-git clone https://github.com/Zeadxt/dbasu.git
-unzip dbasu/xolpanel.zip
+git clone https://github.com/JurigVPN/scupdate.git
+unzip scupdate/xolpanel.zip
 pip3 install -r xolpanel/requirements.txt
 pip3 install pillow
 
@@ -13,9 +13,9 @@ echo ""
 read -e -p "[*] Input your Bot Token : " bottoken
 read -e -p "[*] Input Your Id Telegram :" admin
 read -e -p "[*] Input Your Domain :" domain
-echo -e BOT_TOKEN='"'$bottoken'"' >> /root/xolpanel/var.txt
-echo -e ADMIN='"'$admin'"' >> /root/xolpanel/var.txt
-echo -e DOMAIN='"'$domain'"' >> /root/xolpanel/var.txt
+echo -e BOT_TOKEN='"'$bottoken'"' >> /root/ftvpn/var.txt
+echo -e ADMIN='"'$admin'"' >> /root/ftvpn/var.txt
+echo -e DOMAIN='"'$domain'"' >> /root/ftvpn/var.txt
 clear
 echo "Done"
 echo "Your Data Bot"
