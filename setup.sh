@@ -40,6 +40,37 @@ fi
 # buat folder
 mkdir -p /etc/xray
 mkdir -p /etc/v2ray
+mkdir /etc/funny
+mkdir /etc/funny/limit
+mkdir /etc/funny/limit/trojan
+mkdir /etc/funny/limit/vless
+mkdir /etc/funny/limit/vmess
+mkdir /etc/funny/limit/ssh
+mkdir /etc/funny/limit/ssh/ip
+mkdir /etc/funny/limit/trojan/ip
+mkdir /etc/funny/limit/trojan/quota
+mkdir /etc/funny/limit/vless/ip
+mkdir /etc/funny/limit/vless/quota
+mkdir /etc/funny/limit/vmess/ip
+mkdir /etc/funny/limit/vmess/quota
+mkdir /etc/funny/trojan
+mkdir /etc/funny/vless
+mkdir /etc/funny/vmess
+mkdir /etc/funny/log
+mkdir /etc/funny/log/trojan
+mkdir /etc/funny/log/vless
+mkdir /etc/funny/log/vmess
+mkdir /etc/funny/log/ssh
+mkdir /etc/funny/cache
+mkdir /etc/funny/cache/trojan-tcp
+mkdir /etc/funny/cache/trojan-ws
+mkdir /etc/funny/cache/trojan-grpc
+mkdir /etc/funny/cache/vless-ws
+mkdir /etc/funny/cache/vless-grpc
+mkdir /etc/funny/cache/vmess-ws
+mkdir /etc/funny/cache/vmess-grpc
+mkdir /etc/funny/cache/vmess-ws-orbit
+mkdir /etc/funny/cache/vmess-ws-orbit1
 touch /etc/xray/domain
 touch /etc/v2ray/domain
 touch /etc/xray/scdomain
@@ -156,6 +187,40 @@ url_izin='https://raw.githubusercontent.com/rizkyckj/izinip/master/ip'
 ip_vps=$(curl -s ifconfig.me)
 # Mendapatkan isi file izin.txt dari URL
 izin=$(curl -s "$url_izin")
+#install limit
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-trojan-grpc
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-trojan-tcp
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-trojan-ws
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-grpc
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-ws
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vless-ws
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vless-grpc
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-ws-orbit
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-ws-orbit1
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-ssh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-trojan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-vless
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-vmess
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-quota-trojan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-quota-vmess
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-quota-vless
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/list-ssh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/list-vmess
+wget https://raw.githubusercontent.com/rizkyckjrvpnstoressl/master/funny/list-vless
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/list-trojan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-ssh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-vmess
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-vless
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-trojan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/loop
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/matikan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-ssh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-trojan
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-vless
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-vmess
+chmod +x *
 #install ssh ovpn
 echo -e "\e[33m-----------------------------------\033[0m"
 echo -e "$BGreen      Install SSH Websocket           $NC"
