@@ -1,9 +1,18 @@
 #!/bin/bash
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 echo "Checking VPS"
+vlx=$(grep -c -e "^#& " "/etc/xray/config.json")
+let vla=$vlx/2
+vmc=$(grep -c -e "^### " "/etc/xray/config.json")
+let vma=$vmc/2
+trx=$(grep -c -E "^#! " "/etc/xray/config.json")
+let tra=$trx/2
+ssx=$(grep -c -E "### " "/etc/trojan-go/akun.conf")
+let ssa=$ssx/2
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;100;33m       • VLESS MENU •         \E[0m"
+eecho -e "      VMESS          TROJAN          VLESS"
+echo -e "       $vma           $tra            $vla"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
 echo -e " [\e[36m•1\e[0m] Create Account Vless "
