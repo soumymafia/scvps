@@ -59,6 +59,13 @@ NC='\e[0m'
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
+colornow=$(cat /etc/yudhynetwork/theme/color.conf)
+export NC="\e[0m"
+export YELLOW='\033[0;33m';
+export RED="\033[0;31m" 
+export COLOR1="$(cat /etc/yudhynetwork/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+export COLBG1="$(cat /etc/yudhynetwork/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')" 
+WH='\033[1;37m'                   
 
 # // Clear
 
@@ -162,6 +169,7 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
+echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• VPS PANEL MENU •${NC} $COLOR1 $NC"                   
 echo -e "                        VPS INFO" | lolcat 
 echo -e ""
 echo -e "OS            \e[0m: "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
@@ -172,6 +180,9 @@ echo -e "Country       \e[0m: $LOC"
 #echo -e "CITY          \e[0m: $CITY"
 echo -e "DOMAIN        \e[0m: $domain"	
 echo -e "DATE & TIME   \e[0m: $DATE2"
+echo "┌──────────────────────────────────────┐"
+echo "│NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"                                             │                                                                      │
+echo "└──────────────────────────────────────┘"
 echo -e ""
 echo -e "                         MENU" | lolcat
 echo -e ""
