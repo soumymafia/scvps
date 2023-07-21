@@ -2,68 +2,99 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/ssnvpn/theme/color.conf)
 NC="\e[0m"
-# // Exporting Language to UTF-8
-BIBlack='\033[1;90m'      # Black
-BIRed='\033[1;91m'        # Red
-BIGreen='\033[1;92m'      # Green
-BIYellow='\033[1;93m'     # Yellow
-BIBlue='\033[1;94m'       # Blue
-BIPurple='\033[1;95m'     # Purple
-BICyan='\033[1;96m'       # Cyan
-BIWhite='\033[1;97m'      # White
-UWhite='\033[4;37m'       # White
-On_IPurple='\033[0;105m'  #
-On_IRed='\033[0;101m'
-IBlack='\033[0;90m'       # Black
-IRed='\033[0;91m'         # Red
-IGreen='\033[0;92m'       # Green
-IYellow='\033[0;93m'      # Yellow
-IBlue='\033[0;94m'        # Blue
-IPurple='\033[0;95m'      # Purple
-ICyan='\033[0;96m'        # Cyan
-IWhite='\033[0;97m'       # White
-NC='\e[0m'
+RED="\033[0;31m" 
+      
 ###########- END COLOR CODE -##########
-clear 
-MYIP=$(curl -sS ipv4.icanhazip.com)
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • RESTOR PANEL MENU •             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             • BACKUP PANEL MENU •             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-[[ "$cekdata" = "404" ]] && {
-red "│  [INFO] Data not found / you never backup"
+echo -e "$COLOR1│${NC}  [INFO] Create password for database"
+read -rp "   [INFO] Enter password : " -e InputPass
+sleep 1
+if [[ -z $InputPass ]]; then
+exit 0
+fi
+echo -e "$COLOR1│${NC}  [INFO] Processing... "
+mkdir -p /root/backup
+sleep 2
+
+cp /etc/passwd /root/backup/ &> /dev/null
+cp -r /etc/xray /root/backup/xray &> /dev/null
+cp -r /etc/trojan-go /root/backup/trojan-go &> /dev/null
+cd /root
+zip -rP $InputPass $nama.zip backup > /dev/null 2>&1
+
+##############++++++++++++++++++++++++#############
+LLatest=`date`
+Get_Data () {
+git clone https://github.com/Rerechan02/backup.git /root/user-backup/ &> /dev/null
+}
+
+Mkdir_Data () {
+mkdir -p /root/user-backup/$nama
+}
+
+Input_Data_Append () {
+if [ ! -f "/root/user-backup/$nama/$nama-last-backup" ]; then
+touch /root/user-backup/$nama/$nama-last-backup
+fi
+echo -e "User         : $nama
+last-backup : $LLatest
+" >> /root/user-backup/$nama/$nama-last-backup
+mv /root/$nama.zip /root/user-backup/$nama/
+}
+
+Save_And_Exit () {
+    DATE=$(date +'%d %B %Y')
+    cd /root/user-backup
+    git config --global user.email "riskifadilah3375@gmail.com" &> /dev/null
+    git config --global user.name "Rerechan02" &> /dev/null
+    rm -rf .git &> /dev/null
+    git init &> /dev/null
+    git add . &> /dev/null
+    git commit -m backup &> /dev/null
+    git branch -M main &> /dev/null
+    git remote add origin https://github.com/Rerechan02/backup
+    git push -f https://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@github.com/Rerechan02/backup.git &> /dev/null
+}
+
+if [ ! -d "/root/user-backup/" ]; then
+sleep 1
+echo -e "$COLOR1│${NC}  [INFO] Getting database... "
+Get_Data
+Mkdir_Data
+sleep 1
+echo -e "$COLOR1│${NC}  [INFO] Getting info server... "
+Input_Data_Append
+sleep 1
+echo -e "$COLOR1│${NC}  [INFO] Processing updating server...... "
+Save_And_Exit
+fi
+link="https://raw.githubusercontent.com/Rerechan02/backup/main/$nama/$nama.zip"
+sleep 1
+echo -e "$COLOR1│${NC}  [INFO] Backup done "
+sleep 1
+echo
+sleep 1
+echo -e "$COLOR1│${NC}  [INFO] Generete Link Backup "
+echo -e "$COLOR1│${NC}"
+sleep 2
+echo -e "$COLOR1│${NC}  The following is a link to your vps data backup file.
+$COLOR1│${NC}  Your VPS IP $IP
+$COLOR1│${NC}
+$COLOR1│${NC}  $link
+$COLOR1│${NC}  save the link pliss!
+$COLOR1│${NC}
+$COLOR1│${NC}  If you want to restore data, please enter the link above.
+$COLOR1│${NC}  Thank You For Using Our Services"
+cd
+rm -rf /root/backup &> /dev/null
+rm -rf /root/user-backup &> /dev/null
+rm -f /root/$nama.zip &> /dev/null
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
-} || {
-echo "│  [INFO] Data found for username $nama"
-}
-
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restore Data..."
-read -rp "│  Password File: " -e InputPass
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Downloading data.."
-wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/Rerechan02/backup/main/$nama/$nama.zip" &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Getting your data..."
-unzip -P $InputPass /root/backup/backup.zip &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Starting to restore data..."
-sleep 1
-rm -f /root/backup/backup.zip &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restoring passwd data..."
-sleep 1
-cp /root/backup/passwd /etc/ &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restoring admin data..."
-sleep 1
-cp -r /root/backup/xray /etc/ &> /dev/null
-cp -r /root/backup/trojan-go /etc/
-rm -rf /root/backup &> /dev/null
-echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Done... Successfully - Script By Rerechan02"
-sleep 1
-rm -f /root/backup/backup.zip &> /dev/null
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo ""
-read -n 1 -s -r -p "   Press any key to reboot"
-reboot
