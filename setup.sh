@@ -156,12 +156,6 @@ url_izin='https://raw.githubusercontent.com/rizkyckj/izinip/master/ip'
 ip_vps=$(curl -s ifconfig.me)
 # Mendapatkan isi file izin.txt dari URL
 izin=$(curl -s "$url_izin")
-#install limit
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-ssh
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-trojan
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-vless
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-vmess
-chmod +x *
 #install ssh ovpn
 echo -e "\e[33m-----------------------------------\033[0m"
 echo -e "$BGreen      Install SSH Websocket           $NC"
