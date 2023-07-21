@@ -157,34 +157,6 @@ ip_vps=$(curl -s ifconfig.me)
 # Mendapatkan isi file izin.txt dari URL
 izin=$(curl -s "$url_izin")
 #install limit
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-trojan-grpc
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-trojan-tcp
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-trojan-ws
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-grpc
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-ws
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vless-ws
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vless-grpc
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-ws-orbit
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/quota-vmess-ws-orbit1
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-ssh
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-trojan
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-vless
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-ip-vmess
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-quota-trojan
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-quota-vmess
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/limit-quota-vless
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/list-ssh
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/list-vmess
-wget https://raw.githubusercontent.com/rizkyckjrvpnstoressl/master/funny/list-vless
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/list-trojan
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-ssh
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-vmess
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-vless
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/log-trojan
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/loop
-wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/matikan
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-ssh
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-trojan
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/funny/cek-vless
