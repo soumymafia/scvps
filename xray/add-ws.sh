@@ -34,7 +34,7 @@ fi
 
     CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
-		if [[ ${CLIENT_EXISTS} == '1' ]]; then
+    if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
             echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
             echo -e "\\E[0;41;36m      Add Vmess Account      \E[0m"
