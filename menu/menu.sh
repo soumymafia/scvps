@@ -178,12 +178,12 @@ clear
 echo -e "$COLOR1 ${NC} ${COLBG1}${WH}             VPS PANEL MENU ${NC} $COLOR1 $NC"                   
 echo -e ""
 echo -e "┌──────────────────────────────────────┐"
-echo -e "|OS            \e[0m: "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
-echo -e "│Uptime        \e[0m: $uptime"
-echo -e "|Public IP     \e[0m: $IPVPS"
-echo -e "│Country       \e[0m: $LOC"
-echo -e "│DOMAIN        \e[0m: $domain"	
-echo -e "│DATE & TIME   \e[0m: $DATE2"
+echo -e "| OS        \e[0m: "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
+echo -e "│ Uptime    \e[0m: $uptime"
+echo -e "| Public IP \e[0m: $IPVPS"
+echo -e "│ Country   \e[0m: $LOC"
+echo -e "│ DOMAIN    \e[0m: $domain"	
+echo -e "│ DATE      \e[0m: $DATE2"
 echo -e "└──────────────────────────────────────┘"                  
 echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}  ${BIYellow} VLESS ${GREEN} ${BIYellow} TROJAN${GREEN}" | lolcat
 echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma        $vla       $tra            $Blue"                
