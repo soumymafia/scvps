@@ -3,7 +3,7 @@
 echo "Input your bot token: "; read token
 echo "Input your telegram user/group id: "; read telid
 
-rm /usr/bin/bkp
+rm /usr/bin/backup
 echo -e "#!/bin/bash
 TELEGRAM_BOT_TOKEN=$token
 TELEGRAM_CHAT_ID=$telid
