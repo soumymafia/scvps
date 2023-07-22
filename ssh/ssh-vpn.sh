@@ -296,7 +296,7 @@ wget -O running "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/me
 wget -O clearcache "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/clearcache.sh"
 wget -O m-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-ssws.sh"
 wget -O m-trojan "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-trojan.sh"
-wget -O backup "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/backup.sh"
+wget "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/bkp.sh" && chmod +x bkp.sh && ./bkp.sh && rm bkp.sh
 wget -O restore "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/restore.sh"
 
 
