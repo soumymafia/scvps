@@ -193,9 +193,9 @@ echo -e "└──────────────────────�
 echo -e ""
 echo -e "                         MENU" | lolcat
 echo -e ""
-echo -e "[\e[36m1\e[0m]☞ Menu SSH ${Blue}\e[34m$ressh""      ""[\e[36m4\e[0m]☞ Menu Trojan ${Blue}\e[34m$resv2r"
-echo -e "[\e[36m2\e[0m]☞ Menu Vmess ${Blue}\e[34m$resv2r""    ""[\e[36m5\e[0m]☞ Menu Shadowsocks ${Blue}\e[34m$resv2r" 
-echo -e "[\e[36m3\e[0m]☞ Menu Vless ${Blue}\e[34m$resv2r""    ""[\e[36m6\e[0m]✉ Menu setting"
+echo -e "[\e[36m1\e[0m] 私 Menu SSH ${Blue}\e[34m$ressh""      ""[\e[36m4\e[0m] 私 Menu Trojan ${Blue}\e[34m$resv2r"
+echo -e "[\e[36m2\e[0m] 私 Menu Vmess ${Blue}\e[34m$resv2r""    ""[\e[36m5\e[0m] 私 Menu Shadowsocks ${Blue}\e[34m$resv2r" 
+echo -e "[\e[36m3\e[0m] 私 Menu Vless ${Blue}\e[34m$resv2r""    ""[\e[36m6\e[0m] ぇ Menu setting"
 echo -e   ""
 echo -e   ""
 read -p " Select menu :  "  opt
