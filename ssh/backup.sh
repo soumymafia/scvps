@@ -101,7 +101,7 @@ Save_And_Exit () {
     git commit -m backup &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/rizkyckj/backup
-    git push -f https://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@github.com/Rerechan02/backup.git &> /dev/null
+    git push -f https://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@github.com/rizkyckj/backup.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -116,7 +116,7 @@ sleep 1
 echo -e "$COLOR1│${NC}  [INFO] Processing updating server...... "
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/rizkyckj/backup/main/$nama/$nama.zip"
+link="https://raw.githubusercontent.com/rizkyckj/backup/master/$nama/$nama.zip"
 sleep 1
 echo -e "$COLOR1│${NC}  [INFO] Backup done "
 sleep 1
