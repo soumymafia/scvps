@@ -65,7 +65,6 @@ export YELLOW='\033[0;33m';
 export RED="\033[0;31m" 
 export COLOR1="$(cat /etc/yudhynetwork/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
 export COLBG1="$(cat /etc/yudhynetwork/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')" 
-WH='\033[1;37m'                   
 
 # // Clear
 
@@ -178,10 +177,9 @@ echo -e "|Public IP     \e[0m: $IPVPS"
 echo -e "│Country       \e[0m: $LOC"
 echo -e "│DOMAIN        \e[0m: $domain"	
 echo -e "│DATE & TIME   \e[0m: $DATE2"
-echo -e "└──────────────────────────────────────┘"
-echo -e "
-echo -e "                  
-echo -e "
+echo -e "└──────────────────────────────────────┘"                  
+echo -e "${BICyan}\033[0m ${BIYellow}SSH${GREEN} RV ${BIYellow}VMESS ${GREEN} RV ${BIYellow}VLESS ${GREEN}RV ${BIYellow}TROJAN${GREEN} RV ${BIYellow}TROJAN GO$NC"
+echo -e "${BICyan}\033[0m ${Blue} $ssh1       $vma         $vla        $tra         $trgo    $NC"                
 echo -e "┌──────────────────────────────────────┐"
 echo -e "│\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r""  ""\e[0mDROPBEAR : \e[0m$resdbr"│                                                                
 echo -e "└──────────────────────────────────────┘"
