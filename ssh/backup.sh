@@ -49,5 +49,5 @@ if [[ \"$1\" == \"backup\" ]]; then
     fi
 else
     echo \"Invalid command. Usage: bkp backup\"
-fi" > /usr/bin/bkp
-chmod +x /usr/bin/bkp
+fi" > /usr/bin/backup
+chmod +x /usr/bin/backup
