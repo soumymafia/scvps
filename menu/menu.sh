@@ -180,14 +180,12 @@ echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}
 echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra            $Blue"                
 echo -e "┌──────────────────────────────────────┐" | lolcat
 echo -e "\e[34m│\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r""  ""\e[0mDROPBEAR : \e[0m$resdbr"                                                                
-echo -e "└──────────────────────────────────────┘" | lolcat
-echo -e "─────────────────────────────────────────────────────" | lolcat                   
+echo -e "└──────────────────────────────────────┘" | lolcat                   
 echo -e "┌────────────────────────────────────────────────────┐"
-echo -e "│ [\e[36m1]\e[31m 私\e[0mMenu SSH ${Blue}\e[34m$ressh""      ""[\e[36m4]\e[35m 私\e[0mMenu Trojan ${Blue}\e[34m$resv2r"
-echo -e "│ [\e[36m2]\e[32m 私\e[0mMenu Vmess ${Blue}\e[34m$resv2r""    ""[\e[36m5]\e[91m 私\e[0mMenu Shadowsocks ${Blue}\e[34m$resv2r" 
-echo -e "│ [\e[36m3]\e[34m 私\e[0mMenu Vless ${Blue}\e[34m$resv2r""    ""[\e[36m6]\e[5m ぇ\e[0mMenu setting"
+echo -e "│ [\e[36m1]\e[31m 私\e[0mMenu SSH $ressh""      ""[\e[36m4]\e[35m 私\e[0mMenu Trojan $resv2r"
+echo -e "│ [\e[36m2]\e[32m 私\e[0mMenu Vmess $resv2r""   ""[\e[36m5]\e[91m 私\e[0mMenu Shadowsocks $resv2r" 
+echo -e "│ [\e[36m3]\e[34m 私\e[0mMenu Vless $resv2r""   ""[\e[36m6]\e[5m ぇ\e[0mMenu setting"
 echo -e "└────────────────────────────────────────────────────┘"
-echo -e "─────────────────────────────────────────────────────" | lolcat
 echo -e   ""
 read -p " Select menu :  "  opt
 echo -e   ""
