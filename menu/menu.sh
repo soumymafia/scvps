@@ -172,15 +172,15 @@ echo -e "│ Country   \e[0m: $LOC"
 echo -e "│ DOMAIN    \e[0m: $domain"	
 echo -e "│ DATE      \e[0m: $DATE2"
 echo -e "┌──────────────────────────────────────┐"
-echo -e "|\e[33m VERSION\E[0m: 2.8"	
-echo -e "│\e[33m CLIENT \E[0m: PREMIUM"	
-echo -e "|\e[33m LISENSI\E[0m: LIFETIME"	
+echo -e "|\e[33m VERSION\E[0m: 2.8""	 ""$NC${BICyan}HARI ini${NC}: ${red}$ttoday
+echo -e "│\e[33m CLIENT \E[0m: PREMIUM""  ""$NC${BICyan}KEMARIN${NC}: ${red}$tyest
+echo -e "|\e[33m LISENSI\E[0m: LIFETIME"" ""$NC${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"	
 echo -e "└──────────────────────────────────────┘"                  
 echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}  ${BIYellow} VLESS ${GREEN} ${BIYellow} TROJAN${GREEN}" | lolcat
 echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra            $Blue"                
 echo -e "┌──────────────────────────────────────┐" | lolcat
 echo -e "${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
-echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
+echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressh"
 echo -e "└──────────────────────────────────────┘" | lolcat                   
 echo -e "┌───────────────────────────────────────────────┐"
 echo -e "│ [\e[36m1]\e[31m 私\e[0mMenu SSH $ressh""     ""[\e[36m4]\e[35m 私\e[0mMenu Trojan $resv2r"
