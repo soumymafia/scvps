@@ -76,19 +76,19 @@ LIGHT='\033[0;37m'
 # // Clear
 
 clear
+cek=$(service ssh status | grep active | cut -d ' ' -f5)
+if [ "$cek" = "active" ]; then
+stat=-f5
+else
+stat=-f7
+fi
 ssh=$(service ssh status | grep active | cut -d ' ' $stat)
 if [ "$ssh" = "active" ]; then
 ressh="${green}ON${NC}"
 else
 ressh="${red}OFF${NC}"
 fi
-sshstunel=$(service stunnel4 status | grep active | cut -d ' ' $stat)
-if [ "$sshstunel" = "active" ]; then
-resst="${green}ON${NC}"
-else
-resst="${red}OFF${NC}"
-fi
-sshws=$(service ws-stunnel status | grep active | cut -d ' ' $stat)
+sshws=$(service ws-ssl status | grep active | cut -d ' ' $stat)
 if [ "$sshws" = "active" ]; then
 ressshws="${green}ON${NC}"
 else
@@ -180,7 +180,7 @@ echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}
 echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra            $Blue"                
 echo -e "┌──────────────────────────────────────┐" | lolcat
 echo -e "${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
-echo -e "${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
+echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
 echo -e "└──────────────────────────────────────┘" | lolcat                   
 echo -e "┌───────────────────────────────────────────────┐"
 echo -e "│ [\e[36m1]\e[31m 私\e[0mMenu SSH $ressh""     ""[\e[36m4]\e[35m 私\e[0mMenu Trojan $resv2r"
