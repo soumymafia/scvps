@@ -186,9 +186,9 @@ echo -e "│ DOMAIN    \e[0m: $domain"
 echo -e "│ DATE      \e[0m: $DATE2"
 echo -e "└──────────────────────────────────────┘"                  
 echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}  ${BIYellow} VLESS ${GREEN} ${BIYellow} TROJAN${GREEN}" | lolcat
-echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma        $vla       $tra            $Blue"                
+echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra            $Blue"                
 echo -e "┌──────────────────────────────────────┐" | lolcat
-echo -e "│| lolcat ""\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r""  ""\e[0mDROPBEAR : \e[0m$resdbr"                                                                
+echo -e "│\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r""  ""\e[0mDROPBEAR : \e[0m$resdbr"                                                                
 echo -e "└──────────────────────────────────────┘" | lolcat
 echo -e ""
 echo -e "                         MENU" | lolcat
