@@ -179,9 +179,11 @@ echo -e "│Country       \e[0m: $LOC"
 echo -e "│DOMAIN        \e[0m: $domain"	
 echo -e "│DATE & TIME   \e[0m: $DATE2"
 echo -e "└──────────────────────────────────────┘"
-echo -e "│"
+echo -e "
+echo -e "                  
+echo -e "
 echo -e "┌──────────────────────────────────────┐"
-echo -e "│\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r"" ""\e[0mDROPBEAR : \e[0m$resdbr"│                                                                
+echo -e "│\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r""  ""\e[0mDROPBEAR : \e[0m$resdbr"│                                                                
 echo -e "└──────────────────────────────────────┘"
 echo -e ""
 echo -e "                         MENU" | lolcat
