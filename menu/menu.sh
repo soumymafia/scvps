@@ -173,7 +173,7 @@ echo -e "│ DOMAIN    \e[0m: $domain"
 echo -e "│ DATE      \e[0m: $DATE2"
 echo -e "┌──────────────────────────────────────┐"
 echo -e "|\e[33m VERSION\E[0m: 2.8""	    ""$NC${BICyan}HARI ini${NC}: ${red}$ttoday $NC"
-echo -e "│\e[33m CLIENT \E[0m: PREMIUM""    ""$NC${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
+echo -e "│\e[33m CLIENT \E[0m: PREMIUM""    ""$NC${BICyan}BULAN${NC}: ${red}$tmon $NC"
 echo -e "|\e[33m LISENSI\E[0m: LIFETIME"" 	
 echo -e "└──────────────────────────────────────┘"                  
 echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}  ${BIYellow} VLESS ${GREEN} ${BIYellow} TROJAN${GREEN}" | lolcat
