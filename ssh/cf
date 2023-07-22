@@ -21,7 +21,7 @@ exit 1
 fi
 DOMAIN=vip-premium.cfd
 SUB_DOMAIN=${sub}.vip-premium.cfd
-CF_ID=8f31d635f682b567f5e7b5337a7c6df9
+CF_ID=rizkyckj7@gmail.com
 CF_KEY=7571c116b59054bd73d885786d323182f3325
 set -euo pipefail
 IP=$(curl -sS ifconfig.me);
@@ -49,13 +49,15 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
-     echo "Host : $SUB_DOMAIN"
-echo "IP=$SUB_DOMAIN" > /var/lib/ipvps.conf
-echo "$SUB_DOMAIN" > /root/domain
-echo "$SUB_DOMAIN" > /etc/xray/domain
-echo "$SUB_DOMAIN" > /etc/v2ray/domain
-echo "$SUB_DOMAIN" > /root/scdomain
-echo "$SUB_DOMAIN" > /root/xray/scdomain
-echo -e "Done Record Domain= ${SUB_DOMAIN} For VPS"
-rm -rf cf
+
+echo "Host : $SUB_DOMAIN"
+echo $SUB_DOMAIN > /root/domain
+echo "IP=$SUB_DOMAIN" > /var/lib/scrz-prem/ipvps.conf
 sleep 1
+yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
+yellow "Domain added.."
+sleep 3
+domain=$(cat /root/domain)
+cp -r /root/domain /etc/xray/domain
+read -n 1 -s -r -p "Press any key to back on genssl"
+certv2ray
