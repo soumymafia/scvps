@@ -88,12 +88,6 @@ ressh="${green}ON${NC}"
 else
 ressh="${red}OFF${NC}"
 fi
-sshstunel=$(service stunnel5 status | grep active | cut -d ' ' $stat)
-if [ "$sshstunel" = "active" ]; then
-resst="${green}ON${NC}"
-else
-resst="${red}OFF${NC}"
-fi
 sshws=$(service ws-ssl status | grep active | cut -d ' ' $stat)
 if [ "$sshws" = "active" ]; then
 ressshws="${green}ON${NC}"
@@ -117,12 +111,6 @@ if [ "$v2r" = "active" ]; then
 resv2r="${green}ON${NC}"
 else
 resv2r="${red}OFF${NC}"
-fi
-sslh=$(service sslh status | grep active | cut -d ' ' $stat)
-if [ "$v2r" = "active" ]; then
-resslh="${green}ON${NC}"
-else
-resslh="${red}OFF${NC}"
 fi
 # VPS Information
 #Domain
@@ -175,8 +163,7 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "$COLOR1 ${NC} ${COLBG1}${WH}             VPS PANEL MENU ${NC} $COLOR1 $NC"                   
-echo -e ""
+echo -e "\\E[0;41;34m     VPS PANEL MENU       \E[0m"
 echo -e "┌──────────────────────────────────────┐"
 echo -e "| OS        \e[0m: "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "│ Uptime    \e[0m: $uptime"
@@ -194,7 +181,7 @@ echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra     
 echo -e "┌──────────────────────────────────────┐" | lolcat
 echo -e "\e[34m│\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r""  ""\e[0mDROPBEAR : \e[0m$resdbr"                                                                
 echo -e "└──────────────────────────────────────┘" | lolcat
-echo -e "$COLOR1 ${NC} ${COLBG1}${WH}             SYSTEM MENU ${NC} $COLOR1 $NC"                        
+echo -e "\\E[0;41;34m      SYSTEM MENU      \E[0m"                                
 echo -e "┌────────────────────────────────────────────────────┐"
 echo -e "│ [\e[36m1]\e[31m 私\e[0mMenu SSH ${Blue}\e[34m$ressh""      ""[\e[36m4]\e[35m 私\e[0mMenu Trojan ${Blue}\e[34m$resv2r"
 echo -e "│ [\e[36m2]\e[32m 私\e[0mMenu Vmess ${Blue}\e[34m$resv2r""    ""[\e[36m5]\e[91m 私\e[0mMenu Shadowsocks ${Blue}\e[34m$resv2r" 
