@@ -163,7 +163,8 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "\\E[0;41;34m     VPS PANEL MENU       \E[0m"
+echo -e "┌──────────────────────────────────────┐"
+echo -e "|    \\E[0;41;34m    VPS PANEL MENU       \E[0m"
 echo -e "┌──────────────────────────────────────┐"
 echo -e "| OS        \e[0m: "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "│ Uptime    \e[0m: $uptime"
