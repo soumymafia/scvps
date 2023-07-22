@@ -179,9 +179,9 @@ echo -e "│Country       \e[0m: $LOC"
 echo -e "│DOMAIN        \e[0m: $domain"	
 echo -e "│DATE & TIME   \e[0m: $DATE2"
 echo -e "└──────────────────────────────────────┘"
-echo "┌──────────────────────────────────────┐"
-echo "│   NGINX : $resngx""  ""XRAY : $resv2r"                                             │                                                                      │
-echo "└──────────────────────────────────────┘"
+echo -e "┌──────────────────────────────────────┐"
+echo -e "│   NGINX : $resngx""  ""XRAY : $resv2r"                                             │                                                                      │
+echo -e "└──────────────────────────────────────┘"
 echo -e ""
 echo -e "                         MENU" | lolcat
 echo -e ""
