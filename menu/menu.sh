@@ -188,14 +188,14 @@ echo -e "└──────────────────────�
 echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}  ${BIYellow} VLESS ${GREEN} ${BIYellow} TROJAN${GREEN}" | lolcat
 echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma        $vla       $tra            $Blue"                
 echo -e "┌──────────────────────────────────────┐" | lolcat
-echo -e "│\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r""  ""\e[0mDROPBEAR : \e[0m$resdbr"                                                                
-echo -e "└──────────────────────────────────────┘"
+echo -e "│ |lolcat "\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r""  ""\e[0mDROPBEAR : \e[0m$resdbr"                                                                
+echo -e "└──────────────────────────────────────┘" | lolcat
 echo -e ""
 echo -e "                         MENU" | lolcat
 echo -e ""
-echo -e "[\e[36m1\e[0m] Menu SSH $ressh""      ""[\e[36m4\e[0m] Menu Trojan $resv2r"
-echo -e "[\e[36m2\e[0m] Menu Vmess $resv2r""    ""[\e[36m5\e[0m] Menu Shadowsocks $resv2r" 
-echo -e "[\e[36m3\e[0m] Menu Vless $resv2r""    ""[\e[36m6\e[0m] Menu setting"
+echo -e "[\e[36m1\e[0m] Menu SSH \e[34m]$ressh""      ""[\e[36m4\e[0m] Menu Trojan \e[34m]$resv2r"
+echo -e "[\e[36m2\e[0m] Menu Vmess \e[34m]$resv2r""    ""[\e[36m5\e[0m] Menu Shadowsocks \e[34m]$resv2r" 
+echo -e "[\e[36m3\e[0m] Menu Vless \e[34m]$resv2r""    ""[\e[36m6\e[0m] Menu setting"
 echo -e   ""
 echo -e   ""
 read -p " Select menu :  "  opt
