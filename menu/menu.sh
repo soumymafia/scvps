@@ -182,7 +182,7 @@ echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra     
 echo -e "┌──────────────────────────────────────┐" | lolcat
 echo -e "\e[34m│\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r""  ""\e[0mDROPBEAR : \e[0m$resdbr"                                                                
 echo -e "└──────────────────────────────────────┘" | lolcat
-echo -e "\\E[0;34;34m      SYSTEM MENU      \E[34m"                                
+echo -e "                    SYSTEM MENU"                   
 echo -e "┌────────────────────────────────────────────────────┐"
 echo -e "│ [\e[36m1]\e[31m 私\e[0mMenu SSH ${Blue}\e[34m$ressh""      ""[\e[36m4]\e[35m 私\e[0mMenu Trojan ${Blue}\e[34m$resv2r"
 echo -e "│ [\e[36m2]\e[32m 私\e[0mMenu Vmess ${Blue}\e[34m$resv2r""    ""[\e[36m5]\e[91m 私\e[0mMenu Shadowsocks ${Blue}\e[34m$resv2r" 
