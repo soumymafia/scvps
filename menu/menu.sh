@@ -163,8 +163,7 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "┌──────────────────────────────────────┐"
-echo -e "|    \\E[0;41;34m    VPS PANEL MENU       \E[0m"
+echo -e "            \\E[0;44;39m    VPS PANEL MENU       \E[0m"
 echo -e "┌──────────────────────────────────────┐"
 echo -e "| OS        \e[0m: "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "│ Uptime    \e[0m: $uptime"
@@ -182,7 +181,7 @@ echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra     
 echo -e "┌──────────────────────────────────────┐" | lolcat
 echo -e "\e[34m│\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r""  ""\e[0mDROPBEAR : \e[0m$resdbr"                                                                
 echo -e "└──────────────────────────────────────┘" | lolcat
-echo -e "                    SYSTEM MENU"                   
+echo -e "                SYSTEM MENU"                   
 echo -e "┌────────────────────────────────────────────────────┐"
 echo -e "│ [\e[36m1]\e[31m 私\e[0mMenu SSH ${Blue}\e[34m$ressh""      ""[\e[36m4]\e[35m 私\e[0mMenu Trojan ${Blue}\e[34m$resv2r"
 echo -e "│ [\e[36m2]\e[32m 私\e[0mMenu Vmess ${Blue}\e[34m$resv2r""    ""[\e[36m5]\e[91m 私\e[0mMenu Shadowsocks ${Blue}\e[34m$resv2r" 
