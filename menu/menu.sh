@@ -180,7 +180,7 @@ echo -e "│DOMAIN        \e[0m: $domain"
 echo -e "│DATE & TIME   \e[0m: $DATE2"
 echo -e "└──────────────────────────────────────┘"
 echo -e "┌──────────────────────────────────────┐"
-echo -e "│\e[0m]NGINX : \e[0m]$resngx""  ""\e[0m]XRAY : \e[0m]$resv2r"                                             │                                                                      │
+echo -e "│\e[0mNGINX : \e[0m$resngx""  ""\e[0mXRAY : \e[0m$resv2r"                                                                
 echo -e "└──────────────────────────────────────┘"
 echo -e ""
 echo -e "                         MENU" | lolcat
