@@ -187,7 +187,7 @@ echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}
 echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra            $Blue"                
 echo -e "─────────────────────────────────────────────────────" | lolcat
 echo -e "${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
-echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} UDP-CUSTOM ${NC}: $udp2"
+echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} UDP-CUSTOM ${NC}: $resv2ray"
 echo -e "─────────────────────────────────────────────────────" | lolcat                   
 echo -e "┌───────────────────────────────────────────────┐"
 echo -e "│ [\e[36m1]\e[31m 私\e[0mMenu SSH $ressh""     ""[\e[36m4]\e[35m 私\e[0mMenu Trojan $resv2r"
