@@ -15,6 +15,8 @@ echo -e " [\e[36m•6\e[0m] Install TCP BBR"
 echo -e " [\e[36m•7\e[0m] DNS CHANGER"
 echo -e " [\e[36m•8\e[0m] BACKUP"
 echo -e " [\e[36m•9\e[0m] RESTORE"
+echo -e " [\e[36m•10\e[0m] LOCK USER"
+echo -e " [\e[36m•11\e[0m] UNLOCK USER"
 echo -e ""
 echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
 echo -e   ""
@@ -34,6 +36,8 @@ case $opt in
 7) clear ; m-dns ; exit ;;
 8) clear ; /usr/bin/backup ; exit ;;
 9) clear ; /usr/bin/restore ; exit ;;
+10) clear ; user-lock ; exit ;;
+11) clear ; user-unlock ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
 esac
