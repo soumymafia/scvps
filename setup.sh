@@ -150,12 +150,6 @@ echo ""
 clear
 
     
-#link izin ip vps
-url_izin='https://raw.githubusercontent.com/rizkyckj/izinip/master/ip'
-# Mendapatkan IP VPS saat ini
-ip_vps=$(curl -s ifconfig.me)
-# Mendapatkan isi file izin.txt dari URL
-izin=$(curl -s "$url_izin")
 #install ssh ovpn
 echo -e "\e[33m-----------------------------------\033[0m"
 echo -e "$BGreen      Install SSH Websocket           $NC"
