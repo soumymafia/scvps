@@ -19,5 +19,5 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo "Dont forget to renew cert"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-m-domain
+certv2ray
 fi
