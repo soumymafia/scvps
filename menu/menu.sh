@@ -176,9 +176,11 @@ echo -e "1.) SSH MENU"
 echo -e "2.) VMESS MENU"
 echo -e "3.) VLESS MENU"
 echo -e "4.) TROJAN MENU"
-echo -e "5.) SHADOWSOCKS MENU"
-echo -e "6.) SETTING MENU"
+echo -e "5.) SETTING MENU"
 echo -e "----------------------"
+echo -e "\\E[0;44;34m  MENU TAMBAHAN       \E[0m"
+echo -e "----------------------"
+
 echo -e   ""
 read -p " Select menu :  "  opt
 echo -e   ""
