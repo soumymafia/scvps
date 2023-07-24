@@ -1,16 +1,16 @@
 #!/bin/bash
-COLOR1='\033[0;35m'
+COLOR1='\e[1;34m'
 NC='\e[0m'
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1  $NC$COLBG1               ${WH}• VPS SETTING •                 $COLOR1  $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}DOMAIN MENU           ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}DNS CHANGER"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}DOMAIN MENU      ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}DNS CHANGER"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}SPEEDTEST        ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}MENU BACKUP"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}AUTOREBOOT    ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}MENU RESTORE"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}RESTART${NC} $sts  ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}LOCK USER"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}BANDWIDTH         ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}UNLOCK USER"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}AUTOREBOOT       ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}MENU RESTORE"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}RESTART${NC}     ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}LOCK USER"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}BANDWIDTH        ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}UNLOCK USER"
 echo -e " $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}MENU$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
