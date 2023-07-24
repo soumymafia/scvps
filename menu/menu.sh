@@ -170,7 +170,7 @@ uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
 echo -e "─────────────────────────────"
-echo -e "\\E[0;44;39m    VPS PANEL MENU      \E[0m"
+echo -e "\\E[0;44;39m  VPS PANEL MENU      \E[0m"
 echo -e "─────────────────────────────"
 echo -e "1.) SSH MENU" 
 echo -e "2.) VMESS MENU"
@@ -178,6 +178,11 @@ echo -e "3.) VLESS MENU"
 echo -e "4.) TROJAN MENU"
 echo -e "5.) SHADOWSOCKS MENU"
 echo -e "6.) SETTING MENU"
+echo -e "─────────────────────────────"
+echo -e "\\E[0;44;39m    MENU       \E[0m"
+echo -e "─────────────────────────────"
+echo -e "7.) PANEL DOMAIN"
+echo -e "8.) DNS MENU"
 echo -e   ""
 read -p " Select menu :  "  opt
 echo -e   ""
@@ -188,6 +193,7 @@ case $opt in
 4) clear ; m-trojan ;;
 5) clear ; m-ssws ;;
 6) clear ; m-system ;;
+7) clear ; m-domain ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
