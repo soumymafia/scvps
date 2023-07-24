@@ -1,24 +1,5 @@
 #!/bin/bash
-MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-CEKEXPIRED () {
-    today=$(date -d +1day +%Y-%m-%d)
-    Exp1=$(curl -sS https://raw.githubusercontent.com/rizkyckj/izin/master/izin | grep $MYIP | awk '{print $3}')
-    if [[ $today < $Exp1 ]]; then
-    echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
-    else
-    echo -e "\e[31mSCRIPT ANDA EXPIRED!\e[0m";
-    exit 0
-fi
-}
-IZIN=$(curl -sS https://raw.githubusercontent.com/rizkyckj/izin/master/izin/ | awk '{print $4}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo -e "\e[32mPermission Accepted...\e[0m"
-CEKEXPIRED
-else
-echo -e "\e[31mPermission Denied!\e[0m";
-exit 0
-fi
 clear
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
@@ -64,19 +45,19 @@ export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
-echo -e "${PURPLE}┌─────────────────────────────────────────────────┐${NC}"
-echo -e "${PURPLE}│${NC}              • VMESS PANEL MENU •              ${NC} ${PURPLE}│$NC"
-echo -e "${PURPLE}└─────────────────────────────────────────────────┘${NC}"
-echo -e " ${PURPLE}┌───────────────────────────────────────────────┐${NC}"
-echo -e " ${PURPLE}│$NC   ${COLOR1}[01]${NC} • ADD TROJAN      ${COLOR1}[04]${NC} • DELETE TROJAN${NC}   ${PURPLE}│$NC"
-echo -e " ${PURPLE}│$NC   ${COLOR1}[02]${NC} • TRIAL TROJAN${NC}    ${COLOR1}[05]${NC} • USER ONLINE    ${PURPLE}│$NC"
-echo -e " ${PURPLE}│$NC   ${COLOR1}[03]${NC} • RENEW TROJAN${NC}    ${COLOR1}[06]${NC} • LOG CREATE TROJAN    ${PURPLE}│$NC"
-echo -e " ${PURPLE}│$NC                                              ${NC} ${PURPLE}│$NC"
-echo -e " ${PURPLE}│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              ${PURPLE}│$NC"
-echo -e " ${PURPLE}└───────────────────────────────────────────────┘${NC}"
-echo -e "${PURPLE}┌────────────────────────────────────────────────┐${NC}"
-echo -e "${PURPLE}│${NC}              SCRIPT RVPN STORES                ${PURPLE}│$NC"
-echo -e "${PURPLE}└─────────────────────────────────────────────────┘${NC}" 
+echo -e "${BLUE}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "${BLUE}│${NC}              • VMESS PANEL MENU •              ${NC} ${BLUE}│$NC"
+echo -e "${BLUE}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BLUE}┌───────────────────────────────────────────────┐${NC}"
+echo -e " ${BLUE}│$NC   ${COLOR1}[01]${NC} • ADD TROJAN           ${COLOR1}[04]${NC} • DELETE TROJAN${NC}   ${PURPLE}│$NC"
+echo -e " ${BLUE}│$NC   ${COLOR1}[02]${NC} • TRIAL TROJAN${NC}    ${COLOR1}[05]${NC} • USER ONLINE    ${PURPLE}│$NC"
+echo -e " ${BLUE}│$NC   ${COLOR1}[03]${NC} • RENEW TROJAN${NC}    ${COLOR1}[06]${NC} • LOG CREATE TROJAN    ${PURPLE}│$NC"
+echo -e " ${BLUE}│$NC                                              ${NC} ${BLUE}│$NC"
+echo -e " ${BLUE}│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              ${PURPLE}│$NC"
+echo -e " ${BLUE}└───────────────────────────────────────────────┘${NC}"
+echo -e "${BLUE}┌────────────────────────────────────────────────┐${NC}"
+echo -e "${BLUE}│${NC}              SCRIPT RVPN STORES                ${BLUE}│$NC"
+echo -e "${BLUE}└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
