@@ -175,18 +175,30 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "□ Server Uptime       = $( uptime -p  | cut -d " " -f 2-10000 ) "
 echo -e "□ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
 echo -e "□ Operating System    = $( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )"
-echo -e "□ Current Domain      = $domain"
+echo -e "□ Current Domain      = $( cat /etc/xray/domain )"
 echo -e "□ Server IP           = $ip_vps"
 echo -e "□ Clients Name        = RVPN STORES"
 echo -e "□ Expired Script VPS  = LIFETIME"
 echo -e "□ Time Reboot VPS     = 00:00 ${GREEN}( Jam 12 Malam )${NC}"
 echo -e "□ AutoScript By Dev   = RVPN STORES"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                     ⇱ STATUS LAYANAN ⇲                       \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
+echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} UDP-CUSTOM ${NC}: $resv2r"    
 echo -e ""
-echo -e "${CYAN}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐"
-echo -e "${CYAN}│ [\e[36m1]\e[34m 私\e[0mMenu SSH $ressh""     ""[\e[36m4]\e[34m 私\e[0mMenu Trojan $resv2r"
-echo -e "${CYAN}│ [\e[36m2]\e[34m 私\e[0mMenu Vmess $resv2r""   ""[\e[36m5]\e[34m 私\e[0mMenu Shadowsocks $resv2r" 
-echo -e "${CYAN}│ [\e[36m3]\e[34m 私\e[0mMenu Vless $resv2r""   ""[\e[36m6]\e[34m ぇ\e[0mMenu setting"
-echo -e "${CYAN}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘"
+echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e "     ${BICyan}[${BIGreen}1${BICyan}]${GREEN} SSH ${NC}" 
+echo -e "     ${BICyan}[${BIGreen}2${BICyan}]${GREEN} VMESS ${NC}"    
+echo -e "     ${BICyan}[${BIGreen}3${BICyan}]${GREEN} VLESS ${NC}"    
+echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${GREEN} TROJAN ${NC}" 
+echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${GREEN} SHADOWSOCKS ${NC}"    
+echo -e "     ${BICyan}[${BIGreen}6${BICyan}]${GREEN} BACKUP/RESTORE ${NC}"    
+echo -e "     ${BICyan}[${BIGreen}7${BICyan}]${GREEN} SETTINGS ${NC}"    
+echo -e "     ${BICyan}[${BIGreen}8${BICyan}]${GREEN} INFO SCRIPT ${NC}"  
+echo -e "     ${BICyan}[${BIGreen}9${BICyan}]${GREEN} INFO SERVER ${NC}"    
+echo -e "     ${BICyan}[${BIGreen}x${BICyan}]${GREEN} EXIT ${NC}"  
+echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 read -p " Select menu :  "  opt
 echo -e   ""
 case $opt in
@@ -196,6 +208,7 @@ case $opt in
 4) clear ; m-trojan ;;
 5) clear ; m-ssws ;;
 6) clear ; m-system ;;
+7) clear ; nano /usr/bin/backup ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
