@@ -184,8 +184,8 @@ echo -e "□ AutoScript   = RVPN PREMIUM "
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ STATUS LAYANAN ⇲                       \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}  ${BIYellow} VLESS ${GREEN} ${BIYellow} TROJAN${GREEN}" | lolcat
-echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra            $Blue"                
+echo -e "   $SSH$               $VMESS                        $VLESS                    $TROJAN" | lolcat
+echo -e "   $ssh1               $vma                           $vla                       $tra"                
 echo -e "\033[0;34m─────────────────────────────────────────────────────────────────────" | lolcat
 echo -e "${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} UDP-CUSTOM ${NC}: $resv2r"
