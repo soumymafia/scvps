@@ -169,31 +169,15 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "         \\E[0;44;39m    VPS PANEL MENU       \E[0m"
-echo -e "\033[0;34m┌──────────────────────────────────────┐"
-echo -e "\033[0;34m| OS        \e[0m: "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
-echo -e "\033[0;34m│ Uptime    \e[0m: $uptime"
-echo -e "\033[0;34m| Public IP \e[0m: $IPVPS"
-echo -e "\033[0;34m│ Country   \e[0m: $LOC"
-echo -e "\033[0;34m│ DOMAIN    \e[0m: $domain"	
-echo -e "\033[0;34m│ DATE      \e[0m: $DATE2"
-echo -e "\033[0;34m│ STATUS    \e[0m: TAK ADA PENYAKIT YANG TAK BISA DI SEMBUHKAN KECUALI KEMALASAN"
-echo -e "\033[0;34m┌──────────────────────────────────────┐"
-echo -e "\033[0;34m|\e[33m VERSION\E[0m: 2.8""	  ""$NC${BICyan}HARI INI${NC}: ${red}$ttoday $NC"
-echo -e "\033[0;34m│\e[33m CLIENT \E[0m: PREMIUM""  ""$NC${BICyan}BULAN INI${NC}: ${red}$tmon $NC"
-echo -e "\033[0;34m|\e[33m LISENSI\E[0m: LIFETIME" 	
-echo -e "\033[0;34m└──────────────────────────────────────┘"                  
-echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}  ${BIYellow} VLESS ${GREEN} ${BIYellow} TROJAN${GREEN}" | lolcat
-echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra            $Blue"                
-echo -e "\033[0;34m─────────────────────────────────────────────────────"
-echo -e "${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
-echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} UDP-CUSTOM ${NC}: $resv2r"
-echo -e "\033[0;34m─────────────────────────────────────────────────────" | lolcat                   
-echo -e "┌───────────────────────────────────────────────┐"
-echo -e "│ [\e[36m1]\e[31m 私\e[0mMenu SSH $ressh""     ""[\e[36m4]\e[35m 私\e[0mMenu Trojan $resv2r"
-echo -e "│ [\e[36m2]\e[32m 私\e[0mMenu Vmess $resv2r""   ""[\e[36m5]\e[91m 私\e[0mMenu Shadowsocks $resv2r" 
-echo -e "│ [\e[36m3]\e[34m 私\e[0mMenu Vless $resv2r""   ""[\e[36m6]\e[5m ぇ\e[0mMenu setting"
-echo -e "└───────────────────────────────────────────────┘"
+echo -e "─────────────────────────────"
+echo -e "\\E[0;44;39m    VPS PANEL MENU      \E[0m"
+echo -e "─────────────────────────────"
+echo -e "1.) SSH MENU 
+echo -e "2.) VMESS MENU
+echo -e "3.) VLESS MENU
+echo -e "4.) TROJAN MENU
+echo -e "5.) SHADOWSOCKS MENU
+echo -e "6.) SETTING MENU
 echo -e   ""
 read -p " Select menu :  "  opt
 echo -e   ""
