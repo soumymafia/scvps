@@ -1,35 +1,96 @@
 #!/bin/bash
-MYIP=$(wget -qO- ipv4.icanhazip.com);
+MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-vlx=$(grep -c -e "^#& " "/etc/xray/config.json")
-let vla=$vlx/2
-vmc=$(grep -c -e "^### " "/etc/xray/config.json")
-let vma=$vmc/2
-trx=$(grep -c -E "^#! " "/etc/xray/config.json")
-let tra=$trx/2
-ssx=$(grep -c -E "### " "/etc/trojan-go/akun.conf")
-let ssa=$ssx/2
+CEKEXPIRED () {
+    today=$(date -d +1day +%Y-%m-%d)
+    Exp1=$(curl -sS https://raw.githubusercontent.com/rizkyckj/izin/master/izin | grep $MYIP | awk '{print $3}')
+    if [[ $today < $Exp1 ]]; then
+    echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
+    else
+    echo -e "\e[31mSCRIPT ANDA EXPIRED!\e[0m";
+    exit 0
+fi
+}
+IZIN=$(curl -sS https://raw.githubusercontent.com/rizkyckj/izin/master/izin/ | awk '{print $4}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+echo -e "\e[32mPermission Accepted...\e[0m"
+CEKEXPIRED
+else
+echo -e "\e[31mPermission Denied!\e[0m";
+exit 0
+fi
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-eecho -e "      VMESS          TROJAN          VLESS"
-echo -e "       $vma           $tra            $vla"                      
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e ""
-echo -e " [\e[36m•1\e[0m] Create Account Vmess "
-echo -e " [\e[36m•2\e[0m] Trial Account Vmess "
-echo -e " [\e[36m•3\e[0m] Extending Account Vmess "
-echo -e " [\e[36m•4\e[0m] Delete Account Vmess "
-echo -e " [\e[36m•5\e[0m] Check User Login Vmess "
-echo -e " [\e[36m•6\e[0m] User list created Account "
-echo -e ""
-echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
-echo -e ""
-echo -e   "Press x or [ Ctrl+C ] • To-Exit"
-echo ""
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+BIBlack='\033[1;90m'      # Black
+BIRed='\033[1;91m'        # Red
+BIGreen='\033[1;92m'      # Green
+BIYellow='\033[1;93m'     # Yellow
+BIBlue='\033[1;94m'       # Blue
+BIPurple='\033[1;95m'     # Purple
+BICyan='\033[1;96m'       # Cyan
+BIWhite='\033[1;97m'      # White
+UWhite='\033[4;37m'       # White
+On_IPurple='\033[0;105m'  #
+On_IRed='\033[0;101m'
+IBlack='\033[0;90m'       # Black
+IRed='\033[0;91m'         # Red
+IGreen='\033[0;92m'       # Green
+IYellow='\033[0;93m'      # Yellow
+IBlue='\033[0;94m'        # Blue
+IPurple='\033[0;95m'      # Purple
+ICyan='\033[0;96m'        # Cyan
+IWhite='\033[0;97m'       # White
+NC='\e[0m'
+
+# // Export Color & Information
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export LIGHT='\033[0;37m'
+export NC='\033[0m'
+
+# // Export Banner Status Information
+export EROR="[${RED} EROR ${NC}]"
+export INFO="[${YELLOW} INFO ${NC}]"
+export OKEY="[${GREEN} OKEY ${NC}]"
+export PENDING="[${YELLOW} PENDING ${NC}]"
+export SEND="[${YELLOW} SEND ${NC}]"
+export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
+
+# // Export Align
+export BOLD="\e[1m"
+export WARNING="${RED}\e[5m"
+export UNDERLINE="\e[4m"
+
+echo -e "${PURPLE}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "${PURPLE}│${NC}              • VMESS PANEL MENU •              ${NC} ${PURPLE}│$NC"
+echo -e "${PURPLE}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${PURPLE}┌───────────────────────────────────────────────┐${NC}"
+echo -e " ${PURPLE}│$NC   ${COLOR1}[01]${NC} • ADD VMESS      ${COLOR1}[04]${NC} • DELETE VMESS${NC}   ${PURPLE}│$NC"
+echo -e " ${PURPLE}│$NC   ${COLOR1}[02]${NC} • TRIAL VMESS${NC}    ${COLOR1}[05]${NC} • USER ONLINE    ${PURPLE}│$NC"
+echo -e " ${PURPLE}│$NC   ${COLOR1}[03]${NC} • RENEW VMESS${NC}    ${COLOR1}[06]${NC} • LOG CREATE VMESS    ${PURPLE}│$NC"
+echo -e " ${PURPLE}│$NC                                              ${NC} ${PURPLE}│$NC"
+echo -e " ${PURPLE}│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              ${PURPLE}│$NC"
+echo -e " ${PURPLE}└───────────────────────────────────────────────┘${NC}"
+echo -e "${PURPLE}┌────────────────────────────────────────────────┐${NC}"
+echo -e "${PURPLE}│${NC}              SCRIPT RVPN STORES                ${PURPLE}│$NC"
+echo -e "${PURPLE}└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
+case $opt in
+1) clear ; add-ws ; exit ;;
+2) clear ; trialvmess ; exit ;;
+3) clear ; renew-ws ; exit ;;
+4) clear ; del-ws ; exit ;;
+5) clear ; cek-ws ; exit ;;
+6) clear ; cat /etc/log-create-vmess.log ; exit ;;
+0) clear ; menu ; exit ;;
+x) exit ;;
+*) echo "Anda salah tekan " ; sleep 1 ; m-sshovpn ;;
+esac
 case $opt in
 1) clear ; add-ws ; exit ;;
 2) clear ; trialvmess ; exit ;;
