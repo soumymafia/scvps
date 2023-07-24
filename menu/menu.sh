@@ -192,7 +192,7 @@ echo -e "${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}  $
 echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra            $Blue"                
 echo -e ""
 echo -e "${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
-echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} UDP-CUSTOM ${NC}: $resv2r"
+echo -e "${BICyan}    STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} UDP-CUSTOM ${NC}: $resv2r"
 echo -e
 echo -e "${COLOR1}[01]${NC} • ${YELLOW}SSH${NC}"
 echo -e "${COLOR1}[02]${NC} • ${YELLOW}VMESS${NC}"    
@@ -201,9 +201,6 @@ echo -e "${COLOR1}[04]${NC} • ${YELLOW}TROJAN${NC}"
 echo -e "${COLOR1}[05]${NC} • ${YELLOW}SSC${NC}"    
 echo -e "${COLOR1}[06]${NC} • ${YELLOW}SYSTEM${NC}"  
 echo -e " ${RED}"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ RVPN PREMIUM ⇲                         \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 read -p " Select menu :  "  opt
 echo -e   ""
 case $opt in
