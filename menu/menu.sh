@@ -181,6 +181,10 @@ echo -e "----------------------"
 echo -e "\\E[0;44;34m  MENU TAMBAHAN       \E[0m"
 echo -e "----------------------"
 echo -e "6.) PANEL DOMAIN 
+echo -e "7.) SPEEDTEST
+echo -e "7.) AUTO REBOOT 
+echo -e "7.) BANDWIDTH 
+echo -e "7.) DNS CHANGER 
 echo -e ""
 echo -e   ""
 read -p " Select menu :  "  opt
