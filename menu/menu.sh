@@ -176,31 +176,30 @@ echo -e "□ Server Uptime       = $( uptime -p  | cut -d " " -f 2-10000 ) "
 echo -e "□ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
 echo -e "□ Operating System    = $( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )"
 echo -e "□ Current Domain      = $( cat /etc/xray/domain )"
-echo -e "□ Server IP           = ${IP}"
-echo -e "□ Clients Name        = $Name"
+echo -e "□ Server IP           = $ip_vps"
+echo -e "□ Clients Name        = RVPN STORES"
 echo -e "□ Expired Script VPS  = $Exp"
 echo -e "□ Time Reboot VPS     = 00:00 ${GREEN}( Jam 12 Malam )${NC}"
 echo -e "□ AutoScript   = RVPN PREMIUM "
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ STATUS LAYANAN ⇲                       \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e ""
 echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}  ${BIYellow} VLESS ${GREEN} ${BIYellow} TROJAN${GREEN}" | lolcat
 echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra            $Blue"                
-echo -e "\033[0;34m─────────────────────────────────────────────────────"
+echo -e "\033[0;34m─────────────────────────────────────────────────────────────────────" | lolcat
 echo -e "${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} UDP-CUSTOM ${NC}: $resv2r"
-echo -e "\033[0;34m─────────────────────────────────────────────────────" | lolcat                   
+echo -e "\033[0;34m─────────────────────────────────────────────────────────────────────" | lolcat                   
 echo -e " [\e[36m•1\e[0m] SSH Menu"
 echo -e " [\e[36m•2\e[0m] Vmess Menu"
 echo -e " [\e[36m•3\e[0m] Vless Menu"
 echo -e " [\e[36m•4\e[0m] Trojan Menu"
 echo -e " [\e[36m•5\e[0m] Shadowsock Menu"
 echo -e " [\e[36m•6\e[0m] system menu"
-echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | lolcat
+echo -e "\e[33m───────────────────────────────────────────────────────────────────\033[0m" | lolcat
 echo -e "${BICyan}$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | lolcat
-echo -e " \e[33mClient Name   \E[0m: $(cat /root/.nama)"
+echo -e " \e[33mClient Name   \E[0m: RVPNSTORES"
 echo -e " \e[33mScrip Version \E[0m: 5.0"
 echo -e " \e[33mScrip Expired \E[0m: Lifetime"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | lolcat
