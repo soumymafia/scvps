@@ -169,18 +169,8 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m    INFORMASI VPS    \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "□ Server Uptime       = $( uptime -p  | cut -d " " -f 2-10000 ) "
-echo -e "□ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
-echo -e "□ Operating System    = $( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )"
-echo -e "□ Current Domain      = $( cat /etc/xray/domain )"
-echo -e "□ Server IP           = $ip_vps"
-echo -e "□ Clients Name        = RVPN STORES"
-echo -e "□ Expired Script VPS  = LIFETIME"
-echo -e "□ Time Reboot VPS     = 00:00 ${GREEN}( Jam 12 Malam )${NC}"
-echo -e "□ AutoScript By Dev   = RVPN STORES"
+echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow} VMESS ${GREEN}  ${BIYellow} VLESS ${GREEN} ${BIYellow} TROJAN${GREEN}" | lolcat
+echo -e "   ${Blue}\033[0m ${Blue} $ssh1      $vma         $vla        $tra            $Blue"                
 echo -e ""                  
 echo -e "${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} UDP-CUSTOM ${NC}: $resv2r"    
