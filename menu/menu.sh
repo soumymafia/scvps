@@ -192,6 +192,11 @@ echo -e "     ${BICyan}[${BIGreen}4${BICyan}]${BLUE} TROJAN ${NC}"
 echo -e "     ${BICyan}[${BIGreen}5${BICyan}]${BLUE} SHADOWSOCKS ${NC}"
 echo -e "     ${BICyan}[${BIGreen}6${BICyan}]${BLUE} SYSTEM ${NC}"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
+echo -e "$COLOR1 $NC ${WH}Version     ${COLOR1}:${WH}3.0${NC}"
+echo -e "$COLOR1 $NC ${WH}Client Name ${COLOR1}: ${WH}RVPNSTORES${NC}"
+echo -e "$COLOR1 $NC ${WH}License     ${COLOR1}: ${WH}LIFETIME${NC}"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
 read -p " Select menu :  "  opt
 echo -e   ""
 case $opt in
