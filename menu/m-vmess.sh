@@ -53,7 +53,7 @@ echo -e " ${BLUE}│$NC   ${COLOR1}[01]${NC} • ADD VMESS   ${COLOR1}[04]${NC} 
 echo -e " ${BLUE}│$NC   ${COLOR1}[02]${NC} • TRIAL VMESS${NC}  ${COLOR1}[05]${NC} • USER ONLINE    ${BLUE}│$NC"
 echo -e " ${BLUE}│$NC   ${COLOR1}[03]${NC} • RENEW VMESS${NC}  ${COLOR1}[06]${NC} • LOG CREATE VMESS    ${BLUE}│$NC"
 echo -e " ${BLUE}│$NC                                              ${NC} ${BLUE}│$NC"
-echo -e " ${BLUE}│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              ${BLUE}│$NC"
+echo -e " ${BLUE}│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}"                              ${BLUE}│$NC"
 echo -e " ${BLUE}└───────────────────────────────────────────────┘${NC}"
 echo -e "${BLUE}┌────────────────────────────────────────────────┐${NC}"
 echo -e "${BLUE}│${NC}              SCRIPT RVPN STORES                ${BLUE}│$NC"
