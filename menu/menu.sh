@@ -169,8 +169,8 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "   ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow}        VMESS ${GREEN}  ${BIYellow}        VLESS ${GREEN} ${BIYellow}       TROJAN${GREEN}" | lolcat
-echo -e "   ${Blue}\033[0m ${Blue} $ssh1                                  $vma         $vla        $tra            $Blue"                                  
+echo -e "       ${BICyan}\033[0m ${BIYellow}SSH${GREEN}   ${BIYellow}        VMESS ${GREEN}  ${BIYellow}        VLESS ${GREEN} ${BIYellow}       TROJAN${GREEN}" | lolcat
+echo -e "       ${Blue}\033[0m ${Blue} $ssh1                                  $vma         $vla        $tra            $Blue"                                  
 echo -e "${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} UDP-CUSTOM ${NC}: $resv2r"    
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
