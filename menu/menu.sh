@@ -75,6 +75,7 @@ LIGHT='\033[0;37m'
 y='\033[0;34m'
 IPurple='\033[0;95m'
 On_IPurple='\033[0;105m'
+BIPurple='\033[1;95m' 
 
 # // Clear
 
@@ -184,7 +185,7 @@ echo -e "☞ Clients Name        = RVPNSTORES"
 echo -e "☞ Expired Script VPS  = LIFETIME"
 echo -e ""
 echo -e "┌────────────────────────────────────────────────────┐${NC}"
-echo -e "  ${IPurple} SSH ${NC}: $ressh"" ${IPurple} NGINX ${NC}: $resngx"" ${Lred}  XRAY ${NC}: $resv2r"" ${Lred} TROJAN ${NC}: $resv2r"
+echo -e "  ${PURPLE} SSH ${NC}: $ressh"" ${BPurple} NGINX ${NC}: $resngx"" ${BIPurple}  XRAY ${NC}: $resv2r"" ${Lred} TROJAN ${NC}: $resv2r"
 echo -e "  ${BICyan}     STUNNEL ${NC}: $ressh" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} UDP-CUSTOM ${NC}: $resv2r"    
 echo -e "${y}┌──────────────────────────────────────────────────┐${NC}"
 echo -e "${y}│  \033[0m ${On_IPurple}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  $COLOR1"
