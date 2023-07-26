@@ -176,7 +176,7 @@ echo -e "${y}━━━━━━━━━━━━━━━━━━━━━━�
 echo -e "☞ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
 echo -e "☞ Current Domain      = $( cat /etc/xray/domain )"
 echo -e "☞ Server IP           = $ip_vps"
-echo -e "☞ ISP                 = $(cat /root/.isp)${NC}"
+echo -e "☞ ISP                 = $ISP"
 echo -e "☞ Server Resource     = RAM = $persenmemori% | CPU = $persencpu%"
 echo -e "☞ Clients Name        = RVPNSTORES"
 echo -e "☞ Expired Script VPS  = LIFETIME"
