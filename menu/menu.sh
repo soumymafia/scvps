@@ -176,6 +176,7 @@ clear
 echo -e "${y}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\\E[40;1;37m      SCRIPT MULTIPORT BY RVPN STORES               \E[0m"
 echo -e "${y}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "☞ OS                  = "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
 echo -e "☞ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
 echo -e "☞ Current Domain      = $( cat /etc/xray/domain )"
 echo -e "☞ Server IP           = $ip_vps"
