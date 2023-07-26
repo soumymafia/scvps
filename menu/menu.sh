@@ -192,7 +192,7 @@ echo -e "${y}━━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\\E[40;1;37m                  MENU SERVICE               \E[0m"
 echo -e "${y}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "\\E[40;1;37m                     V.2.8              \E[0m"
-echo -e "$┌─────────────────────────────────────────────────────┐${NC}"
+echo -e "┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "   ${BICyan}[${BIGreen}1${BICyan}]${BLUE} SSH ${NC}" 
 echo -e "   ${BICyan}[${BIGreen}2${BICyan}]${BLUE} VMESS ${NC}"    
 echo -e "   ${BICyan}[${BIGreen}3${BICyan}]${BLUE} VLESS ${NC}"    
