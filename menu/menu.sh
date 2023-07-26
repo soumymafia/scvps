@@ -188,7 +188,7 @@ echo -e "┌──────────────────────�
 echo -e "  ${yell} SSH ${NC}: $ressh"" ${yell} NGINX ${NC}: $resngx"" ${yell}  XRAY ${NC}: $resv2r"" ${yell} TROJAN ${NC}: $resv2r"
 echo -e "  ${yell}     STUNNEL ${NC}: $ressh" "${yell} DROPBEAR ${NC}: $resdbr" "${yell} UDP-CUSTOM ${NC}: $resv2r"    
 echo -e "${y}┌──────────────────────────────────────────────────┐${NC}"
-echo -e "${y}│  \033[0m ${On_IPurple}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  $COLOR1"
+echo -e "${y}│  \033[0m ${yell}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  $COLOR1"
 echo -e "${y}│  \033[0m ${Blue} $ssh1        $vma           $vla          $tra               $ssa   $NC    $COLOR1"
 echo -e "${y}└──────────────────────────────────────────────────┘${NC}"
 echo -e "${y}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
