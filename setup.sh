@@ -148,7 +148,7 @@ echo -e "$BGreen      Install SSH Websocket           $NC"
 echo -e "\e[33m-----------------------------------\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/rizkyckj/AutoScriptXray/master/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #UDP CUSTOM
 sleep 0.5
 clear
@@ -159,15 +159,15 @@ echo -e "$BGreen          Install XRAY              $NC"
 echo -e "\e[33m-----------------------------------\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/rizkyckj/AutoScriptXray/master/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/rizkyckj/AutoScriptXray/master/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 #Download Extra Menu
 echo -e "\e[33m-----------------------------------\033[0m"
 echo -e "$BGreen        DOWNLOAD EXTRA MENU              $NC"
 echo -e "\e[33m-----------------------------------\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/rizkyckj/AutoScriptXray/master/update/update.sh && chmod +x update.sh && ./update.sh
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/update/update.sh && chmod +x update.sh && ./update.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
