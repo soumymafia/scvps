@@ -289,7 +289,7 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 # menu
-wget -O menu "rvpnstores"
+wget -O menu "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/menu.sh"
 wget -O m-vmess "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-vmess.sh"
 wget -O m-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-vless.sh"
 wget -O running "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/running.sh"
