@@ -21,6 +21,7 @@ IPurple='\033[0;95m'      # Purple
 ICyan='\033[0;96m'        # Cyan
 IWhite='\033[0;97m'       # White
 NC='\e[0m'
+y='\033[0;34m'
 
 # // Export Color & Information
 export RED='\033[0;31m'
@@ -45,19 +46,16 @@ export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
-echo -e "${BLUE}┌─────────────────────────────────────────────────┐${NC}"
-echo -e "${BLUE}│${NC}              • VMESS PANEL MENU •              ${NC} ${BLUE}│$NC"
-echo -e "${BLUE}└─────────────────────────────────────────────────┘${NC}"
-echo -e " ${BLUE}┌───────────────────────────────────────────────┐${NC}"
-echo -e " ${BLUE}│$NC   ${COLOR1}[01]${NC} • ADD TROJAN           ${COLOR1}[04]${NC} • DELETE TROJAN${NC}   ${PURPLE}│$NC"
-echo -e " ${BLUE}│$NC   ${COLOR1}[02]${NC} • TRIAL TROJAN${NC}    ${COLOR1}[05]${NC} • USER ONLINE    ${PURPLE}│$NC"
-echo -e " ${BLUE}│$NC   ${COLOR1}[03]${NC} • RENEW TROJAN${NC}    ${COLOR1}[06]${NC} • LOG CREATE TROJAN    ${PURPLE}│$NC"
-echo -e " ${BLUE}│$NC                                              ${NC} ${BLUE}│$NC"
-echo -e " ${BLUE}│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              ${PURPLE}│$NC"
-echo -e " ${BLUE}└───────────────────────────────────────────────┘${NC}"
-echo -e "${BLUE}┌────────────────────────────────────────────────┐${NC}"
-echo -e "${BLUE}│${NC}              SCRIPT RVPN STORES                ${BLUE}│$NC"
-echo -e "${BLUE}└─────────────────────────────────────────────────┘${NC}" 
+echo -e "${y}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐${NC}"
+echo -e "  \\E[40;1;37m Xray/Trojan Menu \E[0m"
+echo -e ""
+echo -e "  \\E[40;1;37m [1] Create Xray/Trojan \E[0m"
+echo -e "  \\E[40;1;37m [2] Trial Xray/Trojan  \E[0m"
+echo -e "  \\E[40;1;37m [3] Renew Xray/Trojan \E[0m"    
+echo -e "  \\E[40;1;37m [4] Delete Xray/Trojan \E[0m"
+echo -e "  \\E[40;1;37m [5] Cek User Xray/Trojan \E[0m"
+echo -e "  \\E[40;1;37m [6] List Create Xray/Trojan \E[0m"
+echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘${NC}"
 echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
