@@ -10,9 +10,10 @@
 <p <p align="center"><img src="https://wangchujiang.com/sb/status/stable.svg">
 
 #install
-apt update && apt install wget -y && apt upgrade -y && apt dist-upgrade -y && wget -qO- -O rootvps.sh https://raw.githubusercontent.com/givpn/AutoScriptXray/master/rootvps.sh && bash rootvps.sh
 ```
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/givpn/AutoScriptXray/master/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+apt update && apt install wget -y && apt upgrade -y && apt dist-upgrade -y && wget -qO- -O rootvps.sh https://raw.githubusercontent.com/givpn/AutoScriptXray/master/rootvps.sh && bash rootvps.sh
 
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/givpn/AutoScriptXray/master/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+```
 
 ![IMG-20230624-WA0070(1)](https://github.com/rizkyckj/rvpnstores/assets/132219364/59d08139-1f4f-4dd2-88fc-ab6c2e855bbf)
