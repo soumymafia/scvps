@@ -10,4 +10,4 @@
 <p <p align="center"><img src="https://wangchujiang.com/sb/status/stable.svg">
 
 
-![IMG-20230624-WA0070(15)](https://github.com/rizkyckj/rvpnstores/assets/132219364/59d08139-1f4f-4dd2-88fc-ab6c2e855bbf)
+![IMG-20230624-WA0070(1)](https://github.com/rizkyckj/rvpnstores/assets/132219364/59d08139-1f4f-4dd2-88fc-ab6c2e855bbf)
