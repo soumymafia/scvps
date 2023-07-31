@@ -19,3 +19,6 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 ```
 - BUY A COFFE
 ![IMG-20230624-WA0070(1)](https://github.com/rizkyckj/rvpnstores/assets/132219364/59d08139-1f4f-4dd2-88fc-ab6c2e855bbf)
+
+DONATE QRIS
+[![Saweria donate button]([https://img.shields.io/badge/Donate-Saweria-red)](https://saweria.co/givpn11](https://github.com/rizkyckj/rvpnstores/assets/132219364/59d08139-1f4f-4dd2-88fc-ab6c2e855bbf)https://github.com/rizkyckj/rvpnstores/assets/132219364/59d08139-1f4f-4dd2-88fc-ab6c2e855bbf)
