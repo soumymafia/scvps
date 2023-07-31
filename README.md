@@ -18,4 +18,6 @@ apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
 # BUY A COFFE
+https://saweria.co/rizkykckj
+
 ![IMG-20230624-WA0070(1)](https://github.com/rizkyckj/rvpnstores/assets/132219364/59d08139-1f4f-4dd2-88fc-ab6c2e855bbf)
