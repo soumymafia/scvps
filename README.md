@@ -9,18 +9,18 @@
 <p <p align="center"><img src="https://img.shields.io/badge/Service-Webmin-success.svg"> <img src="https://img.shields.io/badge/Service-Helium-success.svg">
 <p <p align="center"><img src="https://wangchujiang.com/sb/status/stable.svg">
 
-# UPDATE VPS 
+**UPDATE VPS** 
 ```
 apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
 ```
-# INSTALL SCRIPT 
+**INSTALL SCRIPT** 
 ```
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
-# BUY A COFFE
+**BUY A COFFE**
 **SAWERIA**
  
 https://saweria.co/rizkykckj
 
-# QRIS 
+**QRIS** 
 ![IMG-20230624-WA0070(1)](https://github.com/rizkyckj/rvpnstores/assets/132219364/59d08139-1f4f-4dd2-88fc-ab6c2e855bbf)
