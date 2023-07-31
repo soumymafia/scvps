@@ -9,7 +9,7 @@
 <p <p align="center"><img src="https://img.shields.io/badge/Service-Webmin-success.svg"> <img src="https://img.shields.io/badge/Service-Helium-success.svg">
 <p <p align="center"><img src="https://wangchujiang.com/sb/status/stable.svg">
 
-# UPDATE VPS
+#UPDATE VPS 
 ```
 apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
 ```
