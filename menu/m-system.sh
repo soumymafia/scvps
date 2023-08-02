@@ -1,5 +1,41 @@
 #!/bin/bash
 echo "Checking VPS"
+#link izin ip vps
+url_izin='https://raw.githubusercontent.com/rizkyckj/izin/master/izin'
+
+#IP VPS
+ip_vps=$(curl -sS ifconfig.me)
+
+# Mendapatkan isi file izin.txt dari URL
+izin=$(curl -s "$url_izin")
+
+# Memeriksa apakah konten izin.txt berhasil didapatkan
+if [[ -n "$izin" ]]; then
+  while IFS= read -r line; do
+    # Memisahkan nama VPS, IP VPS, dan tanggal kadaluwarsa
+    nama=$(echo "$line" | awk '{print $1}')
+    ipvps=$(echo "$line" | awk '{print $2}')
+    tanggal=$(echo "$line" | awk '{print $3}')
+
+    # Memeriksa apakah IP VPS saat ini cocok dengan IP VPS yang ada di izin.txt
+    if [[ "$ipvps" == "$ip_vps" ]]; then
+      echo "Nama VPS: $nama"
+      echo "IP VPS: $ipvps"
+      echo "Tanggal Kadaluwarsa: $tanggal"
+      break
+    fi
+  done <<< "$izin"
+
+  # Memeriksa apakah IP VPS ditemukan dalam izin.txt
+  if [[ "$ipvps" != "$ip_vps" ]]; then
+    echo "IP VPS tidak ditemukan dalam izin.txt"
+    exit 0
+  fi
+else
+  echo "Konten izin.txt tidak berhasil didapatkan dari URL"
+  exit 0
+fi
+
 clear
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
@@ -49,12 +85,12 @@ export UNDERLINE="\e[4m"
 echo -e "${y}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐${NC}"
 echo -e "  \\E[40;1;37m[ Menu System ] \E[0m"
 echo -e ""
-echo -e "  \\E[40;1;37m [1] Create Menu/Domain \E[0m"
-echo -e "  \\E[40;1;37m [2] Trial Menu/Speedtest \E[0m"
-echo -e "  \\E[40;1;37m [3] Renew Menu/Auto reboot \E[0m"
-echo -e "  \\E[40;1;37m [4] Delete Menu/Restart service \E[0m"
-echo -e "  \\E[40;1;37m [5] Cek User Menu/Bandwidth \E[0m"
-echo -e "  \\E[40;1;37m [6] List Create Menu/m-dns \E[0m"
+echo -e "  \\E[40;1;37m [1] Panel Menu/Domain \E[0m"
+echo -e "  \\E[40;1;37m [2] Panel Menu/Speedtest \E[0m"
+echo -e "  \\E[40;1;37m [3] Panel Menu/Auto reboot \E[0m"
+echo -e "  \\E[40;1;37m [4] Panel Menu/Restart service \E[0m"
+echo -e "  \\E[40;1;37m [5] Panel Menu/Bandwidth \E[0m"
+echo -e "  \\E[40;1;37m [6] Panel Menu/Dns \E[0m"
 echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘${NC}"
 echo -e ""
 read -p " Select menu :  "  opt
