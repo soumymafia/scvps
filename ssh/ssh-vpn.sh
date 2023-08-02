@@ -328,7 +328,7 @@ wget -O sshws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/
 wget -O m-dns "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-dns.sh"
 
 #UPDATE MENU
-wget -O updatemenu "https://raw.githubusercontent.com/rizkykckj/rvpnstores/master/updatemenu.sh"
+wget -O updatemenu "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/updatemenu.sh"
 
 chmod +x menu
 chmod +x m-vmess
