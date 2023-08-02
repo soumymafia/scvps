@@ -1,24 +1,64 @@
 #!/bin/bash
-COLOR1='\033[0;34m'
-NC='\e[0m'
+echo "Checking VPS"
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1  $NC$COLBG1               ${WH}• VPS SETTING •                 $COLOR1  $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}DOMAIN MENU      ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}DNS CHANGER"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}SPEEDTEST        ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}MENU BACKUP"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}AUTOREBOOT       ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}MENU RESTORE"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}RESTART${NC}     ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}LOCK USER"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}BANDWIDTH        ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}UNLOCK USER"
-echo -e " $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}MENU$NC"
-echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                 ${WH}• RVPN STORES •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+BIBlack='\033[1;90m'      # Black
+BIRed='\033[1;91m'        # Red
+BIGreen='\033[1;92m'      # Green
+BIYellow='\033[1;93m'     # Yellow
+BIBlue='\033[1;94m'       # Blue
+BIPurple='\033[1;95m'     # Purple
+BICyan='\033[1;96m'       # Cyan
+BIWhite='\033[1;97m'      # White
+UWhite='\033[4;37m'       # White
+On_IPurple='\033[0;105m'  #
+On_IRed='\033[0;101m'
+IBlack='\033[0;90m'       # Black
+IRed='\033[0;91m'         # Red
+IGreen='\033[0;92m'       # Green
+IYellow='\033[0;93m'      # Yellow
+IBlue='\033[0;94m'        # Blue
+IPurple='\033[0;95m'      # Purple
+ICyan='\033[0;96m'        # Cyan
+IWhite='\033[0;97m'       # White
+NC='\e[0m'
+y='\033[0;34m'
+
+# // Export Color & Information
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export LIGHT='\033[0;37m'
+export NC='\033[0m'
+
+# // Export Banner Status Information
+export EROR="[${RED} EROR ${NC}]"
+export INFO="[${YELLOW} INFO ${NC}]"
+export OKEY="[${GREEN} OKEY ${NC}]"
+export PENDING="[${YELLOW} PENDING ${NC}]"
+export SEND="[${YELLOW} SEND ${NC}]"
+export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
+
+# // Export Align
+export BOLD="\e[1m"
+export WARNING="${RED}\e[5m"
+export UNDERLINE="\e[4m"
+
+echo -e "${y}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐${NC}"
+echo -e "  \\E[40;1;37m[ Menu System ] \E[0m"
 echo -e ""
-echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
+echo -e "  \\E[40;1;37m [1] Create Menu/Domain \E[0m"
+echo -e "  \\E[40;1;37m [2] Trial Menu/Speedtest \E[0m"
+echo -e "  \\E[40;1;37m [3] Renew Menu/Auto reboot \E[0m"
+echo -e "  \\E[40;1;37m [4] Delete Menu/Restart service \E[0m"
+echo -e "  \\E[40;1;37m [5] Cek User Menu/Bandwidth \E[0m"
+echo -e "  \\E[40;1;37m [6] List Create Menu/m-dns \E[0m"
+echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘${NC}"
+echo -e ""
+read -p " Select menu :  "  opt
+echo -e ""
 case $opt in
 1) clear ; m-domain ; exit ;;
 2) clear ; speedtest ; exit ;;
