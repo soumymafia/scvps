@@ -85,12 +85,13 @@ export UNDERLINE="\e[4m"
 echo -e "${y}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐${NC}"
 echo -e "  \\E[40;1;37m[ Menu System ] \E[0m"
 echo -e ""
-echo -e "  \\E[40;1;37m [1] Panel Menu/Domain \E[0m"
-echo -e "  \\E[40;1;37m [2] Panel Menu/Speedtest \E[0m"
-echo -e "  \\E[40;1;37m [3] Panel Menu/Auto reboot \E[0m"
-echo -e "  \\E[40;1;37m [4] Panel Menu/Restart service \E[0m"
-echo -e "  \\E[40;1;37m [5] Panel Menu/Bandwidth \E[0m"
-echo -e "  \\E[40;1;37m [6] Panel Menu/Dns \E[0m"
+echo -e "  \\E[40;1;37m [1] Panel Domain \E[0m"
+echo -e "  \\E[40;1;37m [2] Panel Speedtest \E[0m"
+echo -e "  \\E[40;1;37m [3] Panel Auto reboot \E[0m"
+echo -e "  \\E[40;1;37m [4] Panel Restart service \E[0m"
+echo -e "  \\E[40;1;37m [5] Panel Bandwidth \E[0m"
+echo -e "  \\E[40;1;37m [6] Panel DNS \E[0m"
+echo -e "  \\E[40;1;37m [7] Panel UPDATE MENU \E[0m"
 echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘${NC}"
 echo -e ""
 read -p " Select menu :  "  opt
@@ -102,10 +103,7 @@ case $opt in
 4) clear ; restart ; exit ;;
 5) clear ; bw ; exit ;;
 6) clear ; m-dns ; exit ;;
-7) clear ; /usr/bin/backup ; exit ;;
-8) clear ; /usr/bin/restore ; exit ;;
-9) clear ; user-lock ; exit ;;
-10) clear ; user-unlock ; exit ;;
+7) clear ; updatemenu; exit ;;
 0) clear ; menu ;; 
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
