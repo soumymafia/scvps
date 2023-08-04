@@ -338,6 +338,8 @@ chmod +x clearcache
 chmod +x m-ssws
 chmod +x m-trojan
 chmod +x updatemenu
+chmod +× backup
+chmod +× restore 
 
 chmod +x m-sshovpn
 chmod +x usernew
