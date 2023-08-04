@@ -1,13 +1,16 @@
 #!/bin/bash
+# // String / Request Data
+# Getting
+MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 apt install jq curl -y
-DOMAIN=givpn.online
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=asx-${sub}.givpn.online
-CF_ID=admin@givpn.online
-CF_KEY=fa8f8ea9172c18e3b2b689ef3e782f3b308d2
+sub=$(</dev/urandom tr -dc a-z | head -c4)
+DOMAIN=remoot.my.id
+SUB_DOMAIN=${sub}.remoot.my.id
+CF_ID=arismar.amar@gmail.com
+CF_KEY=f7fa85e2472592639b7d1cf82f1c5490ec1cd
 set -euo pipefail
-IP=$(wget -qO- ifconfig.me);
+IP=$(curl -sS ifconfig.me);
 echo "Updating DNS for ${SUB_DOMAIN}..."
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
      -H "X-Auth-Email: ${CF_ID}" \
@@ -32,13 +35,16 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
+     
 echo "Host : $SUB_DOMAIN"
-echo "IP=$SUB_DOMAIN" >> /var/lib/ipvps.conf
 echo $SUB_DOMAIN > /root/domain
-echo "$SUB_DOMAIN" > /root/scdomain
-echo "$SUB_DOMAIN" > /etc/xray/scdomain
-echo "$SUB_DOMAIN" > /etc/xray/domain
-echo "$SUB_DOMAIN" > /etc/v2ray/domain
-echo -e "Done Record Domain= ${SUB_DOMAIN} For VPS"
-sleep 2
-rm -f /root/cf.sh
+echo "IP=$SUB_DOMAIN" > /var/lib/scrz-prem/ipvps.conf
+sleep 1
+yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
+yellow "Domain added.."
+sleep 3
+domain=$(cat /root/domain)
+cp -r /root/domain /etc/xray/domain
+read -n 1 -s -r -p "Press any key to back on genssl"
+
+menu 
