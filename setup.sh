@@ -148,34 +148,21 @@ echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
 clear
-    echo -e "\\E[40;1;37m            SETUP DOMAIN VPS     \E[0m"
-    echo -e "${y}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐${NC}"
-    echo -e "\\E[40;1;37m  1. DOMAIN RANDOM RVPN STORES          \E[0m"
-    echo -e "\\E[40;1;37m  2. CHOOSE YOUR DOMAIN               \E[0m"
-    echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘${NC}"
-    read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
-	if test $dns -eq 1; then
-    clear
-    apt install jq curl -y
-    wget -q -O /root/cf "${CDN}/cf" >/dev/null 2>&1
-    chmod +x /root/cf
-    bash /root/cf | tee /root/install.log
-    print_success "Domain Random Done"
-	elif test $dns -eq 2; then
-    read -rp "Enter Your Domain / masukan domain : " dom
-    echo "IP=$dom" > /var/lib/ipvps.conf
-    echo "$dom" > /root/scdomain
+yellow "Add Domain for vmess/vless/trojan dll"
+echo " "
+read -rp "Input ur domain : " -e pp
+    if [ -z $pp ]; then
+        echo -e "
+        Nothing input for domain!
+        Then a random domain will be created"
+    else
+        echo "IP=$dom" > /var/lib/ipvps.conf
+        echo "$dom" > /root/scdomain
 	echo "$dom" > /etc/xray/scdomain
 	echo "$dom" > /etc/xray/domain
 	echo "$dom" > /etc/v2ray/domain
-	echo "$dom" > /root/domain
-    else 
-    echo "Not Found Argument"
-    exit 1
+	echo "$dom" > /root/domainconf
     fi
-	echo -e "${BGreen}Done!${NC}"
-    sleep 2
-    clear
     
 #install ssh ovpn
 echo -e "\e[33m-----------------------------------\033[0m"
