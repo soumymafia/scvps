@@ -21,7 +21,7 @@ echo -e ""
 case $opt in
 1) clear ; add-host ;;
 2) clear ; certv2ray ;;
-2) clear ; wget -q -O auto.sh https://raw.githubusercontent.com/Agunxzzz/Mina-Xray-SSH/main/domaingratis && chmod +x auto.sh && ./auto.sh ;;
+3) clear ; wget https://raw.githubusercontent.com/givpn/AutoScriptXray/master/ssh/cf && chmod +x cf && ./cf ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo "Anda salah tekan" ; sleep 1 ; m-domain ;;
