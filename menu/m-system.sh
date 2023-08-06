@@ -113,6 +113,7 @@ case $opt in
 9) clear ; wget -qO- bench.sh | bash ; exit ;;
 10) clear ; backup ; exit ;;
 11) clear ; restore ; exit ;;
+11) clear ; wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/udp.sh && chmod +x udp.sh && ./udp.sh ;;
 0) clear ; menu ;; 
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
