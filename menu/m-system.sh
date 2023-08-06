@@ -96,6 +96,7 @@ echo -e "  \\E[40;1;37m [8] Banner SSH \E[0m"
 echo -e "  \\E[40;1;37m [9] Bench Info \E[0m"
 echo -e "  \\E[40;1;37m [10] backup  \E[0m"
 echo -e "  \\E[40;1;37m [11] restore  \E[0m"
+echo -e "  \\E[40;1;37m [12] install udp custom \E[0m"
 echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘${NC}"
 echo -e ""
 read -p " Select menu :  "  opt
