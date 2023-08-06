@@ -16,11 +16,11 @@ clear
 IP=$(wget -qO- ipinfo.io/ip);
 date=$(date +"%Y-%m-%d")
 clear
-email=$(cat /home/email)
+email=$(cat /home/rohanah772@gmail.com)
 if [[ "$email" = "" ]]; then
 echo "Masukkan Email Untuk Menerima Backup"
-read -rp "Email : " -e email
-cat <<EOF>>/home/email
+read -rp "Email : " -e rohanah772@gmail.com
+cat <<EOF>>/home/rohanah772@gmail.com
 $email
 EOF
 fi
