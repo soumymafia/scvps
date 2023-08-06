@@ -170,8 +170,8 @@ clear
 echo -e "${y}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\\E[40;1;37m      SCRIPT MULTIPORT BY RVPN STORES               \E[0m"
 echo -e "${y}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "☞ OS                  = "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
-echo -e "☞ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
+echo -e "\\E[40;1;37m☞ OS                  = "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
+echo -e "\\E[40;1;37m☞ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
 echo -e "\\E[40;1;37m☞ Domain              = $( cat /etc/xray/domain )"
 echo -e "☞ Server IP           = \\E[40;1;37m$ip_vps"
 echo -e "☞ ISP                 = \\E[40;1;37m$(wget -qO- ipinfo.io/org )" 
