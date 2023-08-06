@@ -194,7 +194,7 @@ echo -e "  \\E[40;1;37m [2] Xray/Vmess \E[0m"
 echo -e "  \\E[40;1;37m [3] Xray/Vless \E[0m"    
 echo -e "  \\E[40;1;37m [4] Xray/Trojan \E[0m"
 echo -e "  \\E[40;1;37m [5] Xray/Shadowsocks \E[0m"
-echo -e "  \\E[40;1;37m [6] System Menu \E[0m ⚙️"
+echo -e "  \\E[40;1;37m [6] System Menu \E[0m⚙️"
 echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘${NC}"
 echo -e ""
 read -p " Select From Options [1-6 or x ] :  "  opt
