@@ -255,7 +255,7 @@ gg="AM"
 fi
 curl -sS ipv4.icanhazip.com > /etc/myipvps
 echo ""
-echo "=================================================================="  | tee -a log-install.txt
+echo "=================================================="  | tee -a log-install.txt
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                  : 22"  | tee -a log-install.txt
@@ -293,9 +293,7 @@ echo "   - VPS settings" | tee -a log-install.txt
 echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Change port" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
-echo "=============================Contact==============================" | tee -a log-install.txt
-echo "---------------------------t.me/RVPNSTORES-----------------------------" | tee -a log-install.txt
-echo "==================================================================" | tee -a log-install.txt
+echo "=================================================" | tee -a log-install.txt
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
