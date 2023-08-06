@@ -94,6 +94,8 @@ echo -e "  \\E[40;1;37m [6] Panel DNS \E[0m"
 echo -e "  \\E[40;1;37m [7] Panel UPDATE MENU \E[0m"
 echo -e "  \\E[40;1;37m [8] Banner SSH \E[0m"
 echo -e "  \\E[40;1;37m [9] Bench Info \E[0m"
+echo -e "  \\E[40;1;37m [10] backup  \E[0m"
+echo -e "  \\E[40;1;37m [11] restore  \E[0m"
 echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘${NC}"
 echo -e ""
 read -p " Select menu :  "  opt
@@ -108,6 +110,8 @@ case $opt in
 7) clear ; updatemenu; exit ;;
 8) clear ; nano /etc/issue.net ; exit ;;
 9) clear ; wget -qO- bench.sh | bash ; exit ;;
+10) clear ; backup ; exit ;;
+11) clear ; restore ; exit ;;
 0) clear ; menu ;; 
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
