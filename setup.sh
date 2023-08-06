@@ -192,6 +192,12 @@ sleep 0.5
 clear
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+#backup
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ Install ins-br ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+sleep 1
+wget -q https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #Download Extra Menu
 echo -e "\e[33m-----------------------------------\033[0m"
 echo -e "$BGreen        DOWNLOAD EXTRA MENU              $NC"
