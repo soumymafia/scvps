@@ -17,17 +17,17 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 echo "Checking VPS"
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$y            DNS CHANGER$wh"
+echo -e "$y            WEB MENU$wh"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
-echo -e " [\e[36m•1\e[0m] CHANGE DNS"
-echo -e " [\e[36m•2\e[0m] Reset DNS To Default"
+echo -e " [\e[36m•1\e[0m] INSTALL WEB SSH"
+echo -e " [\e[36m•2\e[0m] CHANGE PASSWORD WEB"
 echo -e " [\e[36m•3\e[0m] Back To Main Menu"
 echo -e ""
 read -p "Select From Options [ 1 - 3 ] :  " dns
 echo -e ""
 case $opt in
-1) clear ; ; exit ;;
+1) clear ; wget https://raw.githubusercontent.com/rizkyckj/web/main/sslmar.sh && chmod 777 sslmar.sh && ./sslmar.sh ; exit ;;
 2) clear ; trialvmess ; exit ;;
 3) clear ; renew-ws ; exit ;;
 0) clear ; menu ; exit ;;
