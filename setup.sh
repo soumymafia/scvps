@@ -148,11 +148,12 @@ echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
 clear
-    echo -e "\\E[40;1;37m            SETUP DOMAIN VPS     \E[0m"
-    echo -e "${y}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐${NC}"
-    echo -e "\\E[40;1;37m  1. DOMAIN RANDOM RVPN STORES          \E[0m"
-    echo -e "\\E[40;1;37m  2. CHOOSE YOUR DOMAIN               \E[0m"
-    echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘${NC}"
+    echo -e "${YELLOW}-----------------------------------------------------${NC}"
+echo -e "Anda Ingin Menggunakan Domain Pribadi ?"
+echo -e "Atau Ingin Menggunakan Domain Otomatis ?"
+echo -e "Jika Ingin Menggunakan Domain Pribadi, Ketik ${GREEN}1${NC}"
+echo -e "dan Jika Ingin menggunakan Domain Otomatis, Ketik ${GREEN}2${NC}"
+echo -e "${YELLOW}-----------------------------------------------------${NC}"
     read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
 	if test $dns -eq 1; then
     clear
