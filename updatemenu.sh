@@ -38,18 +38,18 @@ wget -O sshws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/
 wget -O m-dns "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-dns.sh"
 
 # vmess
-wget -O add-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/add-ws.sh" && chmod +x add-ws
-wget -O trialvmess "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/trialvmess.sh" && chmod +x trialvmess
-wget -O renew-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-ws.sh" && chmod +x renew-ws
-wget -O del-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/del-ws.sh" && chmod +x del-ws
-wget -O cek-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/cek-ws.sh" && chmod +x cek-ws
+wget -O add-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/add-ws.sh"
+wget -O trialvmess "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/trialvmess.sh" 
+wget -O renew-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-ws.sh" 
+wget -O del-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/del-ws.sh" 
+wget -O cek-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/cek-ws.sh" 
 
 # vless
-wget -O add-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/add-vless.sh" && chmod +x add-vless
-wget -O trialvless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/trialvless.sh" && chmod +x trialvless
-wget -O renew-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-vless.sh" && chmod +x renew-vless
-wget -O del-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/del-vless.sh" && chmod +x del-vless
-wget -O cek-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstoresmaster/xray/cek-vless.sh" && chmod +x cek-vless
+wget -O add-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/add-vless.sh" 
+wget -O trialvless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/trialvless.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-vless.sh" 
+wget -O del-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/del-vless.sh" 
+wget -O cek-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstoresmaster/xray/cek-vless.sh"
 
 # trojan
 wget -O add-tr "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/add-tr.sh" && chmod +x add-tr
