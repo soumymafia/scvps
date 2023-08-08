@@ -143,26 +143,6 @@ fi
 echo -e "$BGreen Permission Accepted!$NC"
 sleep 2
 
-mkdir -p /var/lib/ >/dev/null 2>&1
-echo "IP=" >> /var/lib/ipvps.conf
-
-echo ""
-clear
-    read -rp "Enter Your Domain / masukan domain : " dom
-    echo "IP=$dom" > /var/lib/ipvps.conf
-    echo "$dom" > /root/scdomain
-	echo "$dom" > /etc/xray/scdomain
-	echo "$dom" > /etc/xray/domain
-	echo "$dom" > /etc/v2ray/domain
-	echo "$dom" > /root/domain
-    else 
-    echo "Not Found Argument"
-    exit 1
-    fi
-	echo -e "${BBLUE}Done!${NC}"
-    sleep 2
-    clear
-    
 #install ssh ovpn
 echo -e "\e[33m-----------------------------------\033[0m"
 echo -e "$BGreen      Install SSH Websocket           $NC"
