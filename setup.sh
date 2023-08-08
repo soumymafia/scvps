@@ -9,7 +9,7 @@ yell='\e[1;33m'
 tyblue='\e[1;36m'
 BRed='\e[1;31m'
 BGreen='\e[1;32m'
-Yellow='\e[1;33m'
+BYellow='\e[1;33m'
 BBlue='\e[1;34m'
 NC='\e[0m'
 y='\033[0;34m'
@@ -148,12 +148,11 @@ echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
 clear
-    echo -e "${Yellow}-----------------------------------------------------${NC}"
-echo -e "Anda Ingin Menggunakan Domain Pribadi ?"
-echo -e "Atau Ingin Menggunakan Domain Otomatis ?"
-echo -e "Jika Ingin Menggunakan Domain Pribadi, Ketik ${GREEN}1${NC}"
-echo -e "dan Jika Ingin menggunakan Domain Otomatis, Ketik ${GREEN}2${NC}"
-echo -e "${Yellow}-----------------------------------------------------${NC}"
+    echo -e "\\E[40;1;37m            SETUP DOMAIN VPS     \E[0m"
+    echo -e "${y}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐${NC}"
+    echo -e "\\E[40;1;37m  1. DOMAIN RANDOM RVPN STORES          \E[0m"
+    echo -e "\\E[40;1;37m  2. CHOOSE YOUR DOMAIN               \E[0m"
+    echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘${NC}"
     read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
 	if test $dns -eq 1; then
     clear
@@ -244,7 +243,7 @@ if [ ! -f "/etc/log-create-shadowsocks.log" ]; then
 echo "Log Shadowsocks Account " > /etc/log-create-shadowsocks.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/givpn/AutoScriptXray/master/menu/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -290,8 +289,8 @@ rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e ""
-echo " reboot in 10 Seconds "
+echo " menu in 10 Seconds "
 sleep 10
 rm -f setup.sh
-reboot 
+menu
 
