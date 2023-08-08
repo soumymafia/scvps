@@ -148,21 +148,20 @@ echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
 clear
-yellow "Add Domain for vmess/vless/trojan dll"
-echo " "
-read -rp "Input ur domain : " -e pp
-    if [ -z $pp ]; then
-        echo -e "
-        Nothing input for domain!
-        Then a random domain will be created"
-    else
-        echo "IP=$dom" > /var/lib/ipvps.conf
-        echo "$dom" > /root/scdomain
+    read -rp "Enter Your Domain / masukan domain : " dom
+    echo "IP=$dom" > /var/lib/ipvps.conf
+    echo "$dom" > /root/scdomain
 	echo "$dom" > /etc/xray/scdomain
 	echo "$dom" > /etc/xray/domain
 	echo "$dom" > /etc/v2ray/domain
-	echo "$dom" > /root/domainconf
+	echo "$dom" > /root/domain
+    else 
+    echo "Not Found Argument"
+    exit 1
     fi
+	echo -e "${BBLUE}Done!${NC}"
+    sleep 2
+    clear
     
 #install ssh ovpn
 echo -e "\e[33m-----------------------------------\033[0m"
@@ -266,6 +265,7 @@ echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
 echo "   - Timezone		: Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
 echo "   - Fail2Ban		: [ON]"  | tee -a log-install.txt
 echo "   - Dflate		: [ON]"  | tee -a log-install.txt
