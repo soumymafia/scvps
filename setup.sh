@@ -9,7 +9,7 @@ yell='\e[1;33m'
 tyblue='\e[1;36m'
 BRed='\e[1;31m'
 BGreen='\e[1;32m'
-BYellow='\e[1;33m'
+Yellow='\e[1;33m'
 BBlue='\e[1;34m'
 NC='\e[0m'
 y='\033[0;34m'
@@ -148,12 +148,12 @@ echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
 clear
-    echo -e "${YELLOW}-----------------------------------------------------${NC}"
+    echo -e "${Yellow}-----------------------------------------------------${NC}"
 echo -e "Anda Ingin Menggunakan Domain Pribadi ?"
 echo -e "Atau Ingin Menggunakan Domain Otomatis ?"
 echo -e "Jika Ingin Menggunakan Domain Pribadi, Ketik ${GREEN}1${NC}"
 echo -e "dan Jika Ingin menggunakan Domain Otomatis, Ketik ${GREEN}2${NC}"
-echo -e "${YELLOW}-----------------------------------------------------${NC}"
+echo -e "${Yellow}-----------------------------------------------------${NC}"
     read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
 	if test $dns -eq 1; then
     clear
