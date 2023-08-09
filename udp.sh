@@ -1,6 +1,6 @@
 mkdir -p /etc/udp
 mkdir -p /etc/udp/
-cat <<NANI > /etc/udp/config.json
+cat /etc/udp/config.json
 {
   "listen": ":36712",
   "stream_buffer": 33554432,
@@ -9,7 +9,6 @@ cat <<NANI > /etc/udp/config.json
     "mode": "passwords"
   }
 }
-NANI
 chmod +x /etc/udp/*
 
 if [ -z "$1" ]; then
