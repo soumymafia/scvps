@@ -54,17 +54,17 @@ wget -O del-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/
 wget -O cek-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstoresmaster/xray/cek-vless.sh"
 
 # trojan
-wget -O add-tr "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/add-tr.sh" && chmod +x add-tr
-wget -O trialtrojan "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/trialtrojan.sh" && chmod +x trialtrojan
-wget -O del-tr "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/del-tr.sh" && chmod +x del-tr
-wget -O renew-tr "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-tr.sh" && chmod +x renew-tr
-wget -O cek-tr "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/cek-tr.sh" && chmod +x cek-tr
+wget -O add-tr "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/add-tr.sh"
+wget -O trialtrojan "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/trialtrojan.sh"
+wget -O del-tr "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/del-tr.sh" 
+wget -O renew-tr "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-tr.sh" 
+wget -O cek-tr "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/cek-tr.sh"
 
 # shadowsocks
-wget -O add-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/add-ssws.sh" && chmod +x add-ssws
-wget -O trialssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/trialssws.sh" && chmod +x trialssws
-wget -O del-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/del-ssws.sh" && chmod +x del-ssws
-wget -O renew-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-ssws.sh" && chmod +x renew-ssws
+wget -O add-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/add-ssws.sh" 
+wget -O trialssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/trialssws.sh" 
+wget -O del-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/del-ssws.sh" 
+wget -O renew-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-ssws.sh"
 echo -e " [INFO] UPDATE SELESAI"
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -73,6 +73,8 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} INSTALL UPDATE MENU [done]"
-     "➢ Update All Menu" 
-     "➢ Fix All Bug"
+echo -e "➢ Update All Menu" 
+echo -e "➢ Fix All Bug"
+echo -e "➢ New fitur"
+
      
