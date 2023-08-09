@@ -51,12 +51,6 @@ let trgo=$trg/2
 
 clear
 # Color Validation
-colornow=$(cat /etc/yudhynetwork/theme/color.conf)
-export NC="\e[0m"
-export YELLOW='\033[0;33m';
-export RED="\033[0;31m" 
-export COLOR1="$(cat /etc/yudhynetwork/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-export COLBG1="$(cat /etc/yudhynetwork/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')" 
 WH='\033[1;37m'                   
 DF='\e[39m'
 Bold='\e[1m'
@@ -181,15 +175,13 @@ echo -e "☞ OS                  = "`hostnamectl | grep "Operating System" | cut
 echo -e "☞ Current Time        = $( date -d "0 days" +"%d-%m-%Y | %X" )"
 echo -e "☞ Current Domain      = $( cat /etc/xray/domain )"
 echo -e "☞ Server IP           = $ip_vps"
-echo -e "☞  ISP                = $(wget -qO- ipinfo.io/org )" 
+echo -e "☞ ISP                 = $(wget -qO- ipinfo.io/org )" 
 echo -e "☞ Server Resource     = RAM = $persenmemori% | CPU = $persencpu%"
 echo -e "☞ Clients Name        = RVPNSTORES"
 echo -e "☞ Expired Script VPS  = LIFETIME"
 echo -e ""
-echo -e "\\E[40;1;37m┌──────────────────────────────────────────────────┐${NC}" 
-echo -e "\\E[40;1;37m│${GREEN}SSH WebSocket${NC} : ${GREEN}ON ${NC}]     [ ${GREEN}XRAY${NC} : ${rev2r} ]      [ ${GREEN}NGINX${NC} : ${resngx 
-echo -e "\\E[40;1;37m└──────────────────────────────────────────────────┘${NC}" 
-echo -e ""
+echo -e "  ${COLOR1}SSH ${NC}: $ressh"" ${COLOR1} NGINX ${NC}: $resngx"" ${COLOR1}  XRAY ${NC}: $resv2r"" ${COLOR1} TROJAN ${NC}: $resv2r"
+echo -e "  ${COLOR1}    STUNNEL ${NC}: $ressh" "${COLOR1} DROPBEAR ${NC}: $resdbr" "${COLOR1} UDP-CUSTOM ${NC}: $resv2r"    
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"   
 echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${y}• ${WH}SSHWS   ${WH}[${COLOR1}${resv2r}${WH}]   ${WH}[${COLOR1}08${WH}]${NC} ${Lred}• ${WH}WEB SSH  ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${y}• ${WH}VMESS   ${WH}[${COLOR1}${resv2r}${WH}]   ${WH}[${COLOR1}08${WH}]${NC} ${Lred}• ${WH}BACKUP   ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"  
