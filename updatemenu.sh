@@ -73,8 +73,8 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} INSTALL UPDATE MENU [done]"
-echo -e "               ➢ Update All Menu" 
-echo -e "               ➢ Fix All Bug"
-echo -e "               ➢ New fitur"
+echo -e "       ➢ Update All Menu" 
+echo -e "       ➢ Fix All Bug"
+echo -e "       ➢ New fitur"
 
      
