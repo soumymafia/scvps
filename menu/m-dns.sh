@@ -10,19 +10,19 @@ COLBG1="$(cat /etc/yudhynetwork/theme/$colornow | grep -w "BG" | cut -d: -f2|sed
 WH='\033[1;37m'                 
 ###########- LawNET -##########
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• THEME PANEL •                ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 $NC  ${WH}[${COLOR1}01${WH}]$NC ${COLOR1}• ${WH}BLUE YODO     ${WH}[${COLOR1}04${WH}]$NC ${COLOR1}• ${WH}CYAN MEOW$NC"
-echo -e " $COLOR1 $NC  ${WH}[${COLOR1}02${WH}]$NC ${COLOR1}• ${WH}RED HOTLINK   ${WH}[${COLOR1}05${WH}]$NC ${COLOR1}• ${WH}GREEN DAUN$NC"
-echo -e " $COLOR1 $NC  ${WH}[${COLOR1}03${WH}]$NC ${COLOR1}• ${WH}YELLOW DIGI   ${WH}[${COLOR1}06${WH}]$NC ${COLOR1}• ${WH}MAGENTA AXIS$NC"
-echo -e " $COLOR1 $NC"
-echo -e " $COLOR1 $NC  ${WH}[${COLOR1}00${WH}]$NC ${COLOR1}• ${WH}GO BACK$NC"
-echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
+echo -e "$RED┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$RED ${NC} ${COLBG1}                ${WH}• THEME PANEL •                ${NC} $COLOR1 $NC"
+echo -e "$RED└─────────────────────────────────────────────────┘${NC}"
+echo -e " $RED┌───────────────────────────────────────────────┐${NC}"
+echo -e " $RED $NC  ${WH}[${COLOR1}01${WH}]$NC ${COLOR1}• ${WH}BLUE YODO     ${WH}[${COLOR1}04${WH}]$NC ${COLOR1}• ${WH}CYAN MEOW$NC"
+echo -e " $RED $NC  ${WH}[${COLOR1}02${WH}]$NC ${COLOR1}• ${WH}RED HOTLINK   ${WH}[${COLOR1}05${WH}]$NC ${COLOR1}• ${WH}GREEN DAUN$NC"
+echo -e " $RED $NC  ${WH}[${COLOR1}03${WH}]$NC ${COLOR1}• ${WH}YELLOW DIGI   ${WH}[${COLOR1}06${WH}]$NC ${COLOR1}• ${WH}MAGENTA AXIS$NC"
+echo -e " $RED $NC"
+echo -e " $RED $NC  ${WH}[${COLOR1}00${WH}]$NC ${COLOR1}• ${WH}GO BACK$NC"
+echo -e " $RED└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$RED ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
+echo -e "$RED└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read colormenu 
 case $colormenu in
@@ -44,12 +44,12 @@ echo -e "$COLOR1└────────────────────�
 02 | 2)
 clear
 echo "red" >/etc/yudhynetwork/theme/color.conf
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• RED THEME •                  ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 $NC"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}INFO${WH}] ${WH}TEAM RED Active Successfully${NC}"
+echo -e "$RED┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$RED ${NC} ${COLBG1}                ${WH}• RED THEME •                  ${NC} $COLOR1 $NC"
+echo -e "$RED└─────────────────────────────────────────────────┘${NC}"
+echo -e " $RED┌───────────────────────────────────────────────┐${NC}"
+echo -e " $RED $NC"
+echo -e " $RED $NC ${WH}[${COLOR1}INFO${WH}] ${WH}TEAM RED Active Successfully${NC}"
 echo -e " $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
