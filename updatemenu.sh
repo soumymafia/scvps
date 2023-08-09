@@ -1,7 +1,7 @@
 #!/bin/bash
-#clear
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} INSTALL UPDATE MENU"
 sleep 2
+
 wget -O menu "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/menu.sh"
 wget -O m-vmess "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-vmess.sh"
 wget -O m-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-vless.sh"
