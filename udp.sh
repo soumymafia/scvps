@@ -1,6 +1,3 @@
-mkdir -p /etc/udp
-mkdir -p /etc/udp/
-cat /etc/udp/config.json
 {
   "listen": ":36712",
   "stream_buffer": 33554432,
