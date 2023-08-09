@@ -28,7 +28,7 @@ if [ -e "$path" ]; then
    if [[ "$confirm" = [Yy] ]]; then
       bckup
    else
-      menu-backup
+      m-dns
    fi
 else
    bckup
