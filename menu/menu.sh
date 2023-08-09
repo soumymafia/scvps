@@ -98,12 +98,6 @@ ressh="${green}ON${NC}"
 else
 ressh="${red}OFF${NC}"
 fi
-sshws=$(service ws-ssl status | grep active | cut -d ' ' $stat)
-if [ "$sshws" = "active" ]; then
-ressshws="${green}ON${NC}"
-else
-ressshws="${red}OFF${NC}"
-fi
 ngx=$(service nginx status | grep active | cut -d ' ' $stat)
 if [ "$ngx" = "active" ]; then
 resngx="${green}ON${NC}"
