@@ -1,6 +1,7 @@
 #!/bin/bash
-cd /usr/bin
-# menu
+#clear
+echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} INSTALL UPDATE MENU"
+sleep 2
 wget -O menu "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/menu.sh"
 wget -O m-vmess "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-vmess.sh"
 wget -O m-vless "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-vless.sh"
@@ -63,4 +64,14 @@ wget -O add-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/x
 wget -O trialssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/trialssws.sh" && chmod +x trialssws
 wget -O del-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/del-ssws.sh" && chmod +x del-ssws
 wget -O renew-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-ssws.sh" && chmod +x renew-ssws
-menu
+echo -e " [INFO] UPDATE SELESAI"
+clear
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• UPDATE SCRIPT VPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
+echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} INSTALL UPDATE MENU [done]"
+     ➢ Update All Menu 
+     ➢ Fix All Bug
+     
