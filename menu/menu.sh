@@ -83,6 +83,7 @@ y='\033[0;34m'
 IPurple='\033[0;95m'
 On_IPurple='\033[0;105m'
 BIPurple='\033[1;95m' 
+RVPN='\\E[40;1;37m' 
 # // Clear
 
 clear
@@ -189,8 +190,8 @@ echo -e "${GREEN}┌────────────────────
 echo -e "${GREEN}│  \033[0m ${BOLD}${YELLOW} SSH       VMESS         VLESS        TROJAN $NC" 
 echo -e "${GREEN}│  \033[0m ${Blue}   $ssh1          $vma            $vla            $tra $NC" 
 echo -e "${GREEN}└──────────────────────────────────────────────────┘${NC}" 
-echo -e "  ${ORANGE}SSH ${NC}: $ressh"" ${yell} NGINX ${NC}: $resngx"" ${yell}  XRAY ${NC}: $resv2r"" ${yell} TROJAN ${NC}: $resv2r"
-echo -e "  ${yell}    STUNNEL ${NC}: $ressh" "${yell} DROPBEAR ${NC}: $resdbr" "${yell} UDP-CUSTOM ${NC}: $resv2r"    
+echo -e "  ${RVPN}SSH ${RVPN}: $ressh"" ${RVPN} NGINX ${RVPN}: $resngx"" ${RVPN}  XRAY ${RVPN}: $resv2r"" ${RVPN} TROJAN ${RVPN}: $resv2r"
+echo -e "  ${RVPN}    STUNNEL ${RVPN}: $ressh" "${RVPN} DROPBEAR ${RVPN}: $resdbr" "${RVPN} UDP-CUSTOM ${RVPN}: $resv2r"    
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"   
 echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${y}• ${WH}SSHWS   ${WH}[${COLOR1}${resv2r}${WH}]   ${WH}[${COLOR1}08${WH}]${NC} ${Lred}• ${WH}WEB SSH  ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${y}• ${WH}VMESS   ${WH}[${COLOR1}${resv2r}${WH}]   ${WH}[${COLOR1}08${WH}]${NC} ${Lred}• ${WH}BACKUP   ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"  
