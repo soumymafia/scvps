@@ -95,25 +95,25 @@ stat=-f7
 fi
 ssh=$(service ssh status | grep active | cut -d ' ' $stat)
 if [ "$ssh" = "active" ]; then
-ressh="${green}ON${NC}"
+ressh="${BBlue}ON${NC}"
 else
 ressh="${red}OFF${NC}"
 fi
 ngx=$(service nginx status | grep active | cut -d ' ' $stat)
 if [ "$ngx" = "active" ]; then
-resngx="${green}ON${NC}"
+resngx="${BBlue}ON${NC}"
 else
 resngx="${red}OFF${NC}"
 fi
 dbr=$(service dropbear status | grep active | cut -d ' ' $stat)
 if [ "$dbr" = "active" ]; then
-resdbr="${green}ON${NC}"
+resdbr="${BBlue}ON${NC}"
 else
 resdbr="${red}OFF${NC}"
 fi
 v2r=$(service xray status | grep active | cut -d ' ' $stat)
 if [ "$v2r" = "active" ]; then
-resv2r="${green}ON${NC}"
+resv2r="${BBlue}ON${NC}"
 else
 resv2r="${red}OFF${NC}"
 fi
@@ -186,12 +186,10 @@ echo -e "☞ Server Resource     = RAM = $persenmemori% | CPU = $persencpu%"
 echo -e "☞ Clients Name        = RVPNSTORES"
 echo -e "☞ Expired Script VPS  = LIFETIME"
 echo -e ""
-echo -e "${GREEN}┌──────────────────────────────────────────────────┐${NC}" 
-echo -e "${GREEN}│  \033[0m ${BOLD}${YELLOW} SSH       VMESS         VLESS        TROJAN $NC" 
-echo -e "${GREEN}│  \033[0m ${Blue}   $ssh1          $vma            $vla            $tra $NC" 
-echo -e "${GREEN}└──────────────────────────────────────────────────┘${NC}" 
-echo -e "  ${y}SSH ${Lred}: $ressh"" ${Lred} NGINX ${y}: $resngx"" ${Lred}  XRAY ${RVPN}: $resv2r"" ${y} TROJAN ${RVPN}: $resv2r"
-echo -e "  ${Lred}    STUNNEL ${y}: $ressh" "${y} DROPBEAR ${y}: $resdbr" "${y} UDP-CUSTOM ${RVPN}: $resv2r"    
+echo -e "\\E[40;1;37m┌──────────────────────────────────────────────────┐${NC}" 
+echo -e "\\E[40;1;37m│${GREEN}SSH WebSocket${NC} : ${GREEN}ON ${NC}]     [ ${GREEN}XRAY${NC} : ${rev2r} ]      [ ${GREEN}NGINX${NC} : ${resngx 
+echo -e "\\E[40;1;37m└──────────────────────────────────────────────────┘${NC}" 
+echo -e ""
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"   
 echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${y}• ${WH}SSHWS   ${WH}[${COLOR1}${resv2r}${WH}]   ${WH}[${COLOR1}08${WH}]${NC} ${Lred}• ${WH}WEB SSH  ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${y}• ${WH}VMESS   ${WH}[${COLOR1}${resv2r}${WH}]   ${WH}[${COLOR1}08${WH}]${NC} ${Lred}• ${WH}BACKUP   ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"  
