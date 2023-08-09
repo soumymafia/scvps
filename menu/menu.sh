@@ -199,6 +199,7 @@ echo -e "${y}│  \033[0m ${IPurple}${YELLOW}SSH     VMESS       VLESS      TROJ
 echo -e "${y}│  \033[0m ${Blue} $ssh1        $vma           $vla          $tra               $ssa   $NC    $COLOR1"
 echo -e "${y}└──────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"   
+echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${y}• ${WH}SSHWS   ${WH}[${COLOR1}${resv2r}${WH}]   ${WH}[${COLOR1}08${WH}]${NC} ${Lred}• ${WH}WEB SSH  ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${y}• ${WH}VMESS   ${WH}[${COLOR1}${resv2r}${WH}]   ${WH}[${COLOR1}08${WH}]${NC} ${Lred}• ${WH}BACKUP   ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"  
 echo -e "  ${WH}[${COLOR1}03${WH}]${NC} ${y}• ${WH}VLESS   ${WH}[${COLOR1}${resv2r}${WH}]   ${WH}[${COLOR1}09${WH}]${NC} ${Lred}• ${WH}ADD HOST/DOMAIN  $COLOR1 $NC"  
 echo -e "  ${WH}[${COLOR1}04${WH}]${NC} ${y}• ${WH}TROJAN  ${WH}[${COLOR1}${resv2r}${WH}]   ${WH}[${COLOR1}10${WH}]${NC} ${Lred}• ${WH}RENEW CERT       $COLOR1 $NC"  
