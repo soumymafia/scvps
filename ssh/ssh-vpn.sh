@@ -296,8 +296,10 @@ wget -O running "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/me
 wget -O clearcache "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/clearcache.sh"
 wget -O m-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-ssws.sh"
 wget -O m-trojan "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-trojan.sh"
-wget -O backup "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/restore.sh"
+wget -O /usr/bin/backup" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/backup.sh; chmod 755 /usr/bin/backup"
+wget -O /usr/bin/autobackup" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/autobackup.sh; chmod 755 /usr/bin/autobackup"
+wget -O /usr/bin/restore" https://raw.githubusercontent.com/rizkycki/rvpnstores/master/master/backup/restore.sh; chmod 755 /usr/bin/restore"
+wget -O /usr/bin/backup_setting" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/bset.sh; chmod 755 /usr/bin/backup_setting"
 
 # menu ssh ovpn
 wget -O m-sshovpn "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-sshovpn.sh"
@@ -339,7 +341,9 @@ chmod +x m-ssws
 chmod +x m-trojan
 chmod +x updatemenu
 chmod +× backup
+chmod +× autobackup
 chmod +× restore 
+chmod +× backup_setting
 
 chmod +x m-sshovpn
 chmod +x usernew
