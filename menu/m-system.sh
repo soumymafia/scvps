@@ -58,6 +58,7 @@ ICyan='\033[0;96m'        # Cyan
 IWhite='\033[0;97m'       # White
 NC='\e[0m'
 y='\033[0;34m'
+Lred='\e[91m'
 
 # // Export Color & Information
 export RED='\033[0;31m'
