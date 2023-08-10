@@ -166,16 +166,16 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "${y}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐\033[0m${NC}"
-echo -e "${y}|\\E[40;1;37m      SCRIPT MULTIPORT BY RVPN STORES       \E[0m"
-echo -e "${y}|${y}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘\033[0m${NC}"
-echo -e "${y}│${NC} ☞ OS                  = "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
-echo -e "${y}│${NC} ☞ TIME                = $( date -d "0 days" +"%d-%m-%Y | %X" )"
-echo -e "${y}│${NC} ☞ DOMAIN              = $( cat /etc/xray/domain )"
-echo -e "${y}│${NC} ☞ IP VPS              = $ip_vps"
-echo -e "${y}│${NC} ☞ ISP SERVER          = $(wget -qO- ipinfo.io/org )" 
-echo -e "${y}│${NC} ☞ RAM                 = $uram MB / $tram MB"
-echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${COLOR1}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐\033[0m${NC}"
+echo -e "${COLOR1}|\\E[40;1;37m      SCRIPT MULTIPORT BY RVPN STORES       \E[0m"
+echo -e "${COLOR1}|${COLOR1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘\033[0m${NC}"
+echo -e "${COLOR1}│${NC} ☞ OS                  = "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
+echo -e "${COLOR1}│${NC} ☞ TIME                = $( date -d "0 days" +"%d-%m-%Y | %X" )"
+echo -e "${COLOR1}│${NC} ☞ DOMAIN              = $( cat /etc/xray/domain )"
+echo -e "${COLOR1}│${NC} ☞ IP VPS              = $ip_vps"
+echo -e "${COLOR1}│${NC} ☞ ISP SERVER          = $(wget -qO- ipinfo.io/org )" 
+echo -e "${COLOR1}│${NC} ☞ RAM                 = $uram MB / $tram MB"
+echo -e "${COLOR1}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${COLOR1}SSH ${NC}: $ressh"" ${COLOR1} NGINX ${NC}: $resngx"" ${COLOR1}  XRAY ${NC}: $resv2r"" ${COLOR1} TROJAN ${NC}: $resv2r"
 echo -e "${COLOR1}    STUNNEL ${NC}: $ressh" "${COLOR1} DROPBEAR ${NC}: $resdbr" "${COLOR1} UDP-CUSTOM ${NC}: $resv2r"    
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"   
