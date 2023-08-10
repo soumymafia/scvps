@@ -84,29 +84,21 @@ export UNDERLINE="\e[4m"
 
 echo -e "${y}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐${NC}"
 echo -e "  \\E[40;1;37m[ Menu System ] \E[0m"
-echo -e ""
-echo -e "  \\E[40;1;37m [1] Panel Domain \E[0m""            ""\\E[40;1;37m [6] Panel Web \E[0m"                 
+echo -e ""                 
 echo -e "  \\E[40;1;37m [2] Panel Speedtest \E[0m""         ""\\E[40;1;37m [7] Panel UPDATE MENU \E[0m"
 echo -e "  \\E[40;1;37m [3] Panel Auto reboot \E[0m""       ""\\E[40;1;37m [8] Banner SSH \E[0m"
-echo -e "  \\E[40;1;37m [4] Panel Restart service \E[0m""   ""\\E[40;1;37m [9] Bench Info \E[0m"
-echo -e "  \\E[40;1;37m [5] Panel Bandwidth \E[0m""         ""\\E[40;1;37m [10] backup  \E[0m"
+echo -e "  \\E[40;1;37m [4] Panel Restart service \E[0m"           
 echo -e "${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘${NC}"
 echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
-1) clear ; m-domain ; exit ;;
-2) clear ; speedtest ; exit ;;
+1) clear ; speedtest ; exit ;;
 3) clear ; auto-reboot ; exit ;;
 4) clear ; restart ; exit ;;
 5) clear ; bw ; exit ;;
-6) clear ; m-dns ; exit ;;
 7) clear ; updatemenu; exit ;;
 8) clear ; nano /etc/issue.net ; exit ;;
-9) clear ; wget -qO- bench.sh | bash ; exit ;;
-10) clear ; backup ; exit ;;
-11) clear ; restore ; exit ;;
-12) clear ; clear ; wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/udp.sh && chmod +x udp.sh && ./udp.sh ;;
 0) clear ; menu ;; 
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
