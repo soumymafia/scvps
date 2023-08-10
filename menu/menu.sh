@@ -28,7 +28,7 @@ if [[ -n "$izin" ]]; then
 
   # Memeriksa apakah IP VPS ditemukan dalam izin.txt
   if [[ "$ipvps" != "$ip_vps" ]]; then
-    echo "IP VPS tidak ditemukan dalam izin.txt"
+    echo "eweuh ajg"
     exit 0
   fi
 else
