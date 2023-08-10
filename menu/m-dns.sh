@@ -64,7 +64,7 @@ case $opt in
 03 | 3) clear ; restore ;;
 04 | 4) clear ; backup_setting ;;
 05 | 5) clear ; infos ;;
-06 | 6) clear ; https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/dependencies.sh ;;
+06 | 6) clear ; https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/dependencies.sh ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-backup ;;
 esac
