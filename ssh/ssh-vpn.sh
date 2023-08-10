@@ -296,10 +296,6 @@ wget -O running "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/me
 wget -O clearcache "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/clearcache.sh"
 wget -O m-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-ssws.sh"
 wget -O m-trojan "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-trojan.sh"
-wget -O /usr/bin/backup" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/backup.sh; chmod 755 /usr/bin/backup"
-wget -O /usr/bin/autobackup" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/autobackup.sh; chmod 755 /usr/bin/autobackup"
-wget -O /usr/bin/restore" https://raw.githubusercontent.com/rizkycki/rvpnstores/master/master/backup/restore.sh; chmod 755 /usr/bin/restore"
-wget -O /usr/bin/backup_setting" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/bset.sh; chmod 755 /usr/bin/backup_setting"
 
 # menu ssh ovpn
 wget -O m-sshovpn "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-sshovpn.sh"
@@ -331,6 +327,14 @@ wget -O m-dns "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu
 
 #UPDATE MENU
 wget -O updatemenu "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/updatemenu.sh"
+
+#BOT
+cd; clear; mkdir -p /etc/lukman
+wget -O /usr/bin/backup" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/backup.sh; chmod 755 /usr/bin/backup"
+wget -O /usr/bin/autobackup" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/autobackup.sh; chmod 755 /usr/bin/autobackup"
+wget -O /usr/bin/restore" https://raw.githubusercontent.com/rizkycki/rvpnstores/master/master/backup/restore.sh; chmod 755 /usr/bin/restore"
+wget -O /usr/bin/backup_setting" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/bset.sh; chmod 755 /usr/bin/backup_setting"
+
 
 chmod +x menu
 chmod +x m-vmess
