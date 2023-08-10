@@ -195,11 +195,11 @@ case $opt in
 3) clear ; m-vless ;;
 4) clear ; m-trojan ;;
 5) clear ; m-ssws ;;
-6) clear ; vnstat ;;
+6) clear ; m-dns ;;
 8) clear ; updatemenu ;;
 9) clear ; add-host ;;
 10) clear ; certv2ray ;;
-11) clear ; m-dns ;;
+11) clear ; vnstat ;;
 12) clear ; cat log-install.txt ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
