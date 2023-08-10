@@ -28,7 +28,9 @@ if [[ -n "$izin" ]]; then
 
   # Memeriksa apakah IP VPS ditemukan dalam izin.txt
   if [[ "$ipvps" != "$ip_vps" ]]; then
-    echo "eweuh ajg"
+    echo "Buy AutoScript Premium"
+"WA: 081935718766"
+"Telegram: t.me/RVPNSTORES"
     exit 0
   fi
 else
