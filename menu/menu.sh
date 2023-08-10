@@ -199,7 +199,7 @@ case $opt in
 5) clear ; m-ssws ;;
 6) clear ; m-dns ;;
 7) clear ; nano /usr/bin/backup ;;
-12 clear ; m-system ;;
+12) clear ; m-system ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
