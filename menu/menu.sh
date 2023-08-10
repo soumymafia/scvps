@@ -190,7 +190,7 @@ echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${y}• ${WH}SS WS   ${WH}[${COLOR1}$res
 echo -e "  ${WH}[${COLOR1}06${WH}]${NC} ${y}• ${WH}BOT SSH ${WH}[${COLOR1}Menu${WH}] ${WH}[${COLOR1}12${WH}]${NC} ${Lred}• ${WH}INFO ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
-read -p " Select From Options [1-6 or x ] :  "  opt
+read -p " Select From Options [1-12 or x ] :  "  opt
 echo -e   ""
 case $opt in
 1) clear ; m-sshovpn ;;
