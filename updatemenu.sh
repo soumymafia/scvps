@@ -65,10 +65,11 @@ wget -O del-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/x
 wget -O renew-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-ssws.sh"
 
 #BACKUP
-wget -O /usr/bin/backup" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/backup.sh; chmod 755 /usr/bin/backup"
-wget -O /usr/bin/autobackup" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/autobackup.sh; chmod 755 /usr/bin/autobackup"
-wget -O /usr/bin/restore" https://raw.githubusercontent.com/rizkycki/rvpnstores/master/master/backup/restore.sh; chmod 755 /usr/bin/restore"
-wget -O /usr/bin/backup_setting" https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/bset.sh; chmod 755 /usr/bin/backup_setting"
+wget -q -O /etc/lukman/dependencies.sh raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/dependencies.sh; bash /etc/lukman/dependencies.sh
+wget -q -O /usr/bin/backup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/backup.sh; chmod 755 /usr/bin/backup
+wget -q -O /usr/bin/autobackup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/autobackup.sh; chmod 755 /usr/bin/autobackup
+wget -q -O /usr/bin/restore raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/restore.sh; chmod 755 /usr/bin/restore
+wget -q -O /usr/bin/backup_setting raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/bset.sh; chmod 755 /usr/bin/backup_setting
 echo -e " [INFO] UPDATE SELESAI"
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
