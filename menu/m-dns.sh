@@ -36,7 +36,7 @@ Chat me at telegram @RVPNSTORES if you encounter any errors
 Thank you for using this script
 ===================================================================================="
 echo ""
-read -p "Press enter to go back" -n 1; m-dns
+read -p "Press enter to go back" -n 1; m-dns ;;
 }
 
 
