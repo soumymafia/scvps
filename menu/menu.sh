@@ -175,6 +175,7 @@ echo -e "${y}│${NC} ☞ DOMAIN              = $( cat /etc/xray/domain )"
 echo -e "${y}│${NC} ☞ IP VPS              = $ip_vps"
 echo -e "${y}│${NC} ☞ ISP SERVER          = $(wget -qO- ipinfo.io/org )" 
 echo -e "${y}│${NC} ☞ RAM                 = $uram MB / $tram MB"
+echo -e "${y}└─────────────────────────────────────────────────┘
 echo -e ""
 echo -e "  ${COLOR1}SSH ${NC}: $ressh"" ${COLOR1} NGINX ${NC}: $resngx"" ${COLOR1}  XRAY ${NC}: $resv2r"" ${COLOR1} TROJAN ${NC}: $resv2r"
 echo -e "  ${COLOR1}    STUNNEL ${NC}: $ressh" "${COLOR1} DROPBEAR ${NC}: $resdbr" "${COLOR1} UDP-CUSTOM ${NC}: $resv2r"    
