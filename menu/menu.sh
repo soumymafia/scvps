@@ -199,8 +199,10 @@ case $opt in
 4) clear ; m-trojan ;;
 5) clear ; m-ssws ;;
 6) clear ; m-dns ;;
-7) clear ; nano /usr/bin/backup ;;
-12) clear ; m-system ;;
+
+9) clear ; add-host ;;
+10) clear ; certv2ray ;;
+11) clear ; m-system ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
