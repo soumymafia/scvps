@@ -170,8 +170,8 @@ uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
 echo -e "${y}┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐\033[0m${NC}"
-echo -e "|\\E[40;1;37m      SCRIPT MULTIPORT BY RVPN STORES             | \E[0m"
-echo -e "|${y}└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘\033[0m${NC}"
+echo -e "|\\E[40;1;37m      SCRIPT MULTIPORT BY RVPN STORES      | \E[0m"
+echo -e "|${y}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘\033[0m${NC}"
 echo -e "${y}│${NC} ☞ OS                  = "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
 echo -e "${y}│${NC} ☞ TIME                = $( date -d "0 days" +"%d-%m-%Y | %X" )"
 echo -e "${y}│${NC} ☞ DOMAIN              = $( cat /etc/xray/domain )"
