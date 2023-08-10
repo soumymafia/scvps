@@ -144,9 +144,12 @@ tyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}
 dmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $3" "substr ($4, 1, 1)}')"
 umon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $6" "substr ($7, 1, 1)}')"
 tmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}')"
+vnstat
+read -n 1 -s -r -p "  Press any key to Menu"
+menu 
 # user
 Exp2=$"Lifetime"
-Name=$"givpn"
+Name=$"rvpnstores"
 # Getting CPU Information
 cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
 cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
@@ -165,9 +168,6 @@ freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
-vnstat
-read -n 1 -s -r -p "  Press any key to Menu"
-menu 
 clear 
 echo -e "┌────────────────────────────────────────────────┐\033[0m${NC}"
 echo -e "${COLOR1}|\\E[40;1;37m      SCRIPT MULTIPORT BY RVPN STORES       \E[0m"
