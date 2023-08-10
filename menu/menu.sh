@@ -165,6 +165,10 @@ freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
+clear
+vnstat
+read -n 1 -s -r -p "  Press any key to Menu"
+menu
 clear 
 echo -e "┌────────────────────────────────────────────────┐\033[0m${NC}"
 echo -e "${COLOR1}|\\E[40;1;37m      SCRIPT MULTIPORT BY RVPN STORES       \E[0m"
