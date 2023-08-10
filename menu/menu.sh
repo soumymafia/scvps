@@ -202,7 +202,7 @@ case $opt in
 9) clear ; add-host ;;
 10) clear ; certv2ray ;;
 11) clear ; m-system ;;
-12) clear ; clear ; cat log-install.txt ;;
+12) clear ; cat log-install.txt ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
