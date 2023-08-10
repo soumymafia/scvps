@@ -28,13 +28,7 @@ if [[ -n "$izin" ]]; then
 
   # Memeriksa apakah IP VPS ditemukan dalam izin.txt
   if [[ "$ipvps" != "$ip_vps" ]]; then
-echo "$COLOR1┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐ ${NC}"
-echo "$COLOR1│BUY SCRIPT VPS ${NC}" 
-echo "$COLOR1│ ${NC}"
-echo "$COLOR1│TELEGRAM : @RVPNSTORES  ${NC}"
-echo "$COLOR1│WHATSAPP : 081935718766 ${NC}"
-echo "$COLOR1│ ${NC}"
-echo "$COLOR1└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘ ${NC}"
+echo "acces denied 🔧 "
     exit 0
   fi
 else
