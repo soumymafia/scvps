@@ -65,6 +65,7 @@ wget -O del-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/x
 wget -O renew-ssws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/renew-ssws.sh"
 
 #BACKUP
+cd; clear; mkdir -p /etc/lukman
 wget -q -O /usr/bin/backup raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/backup.sh; chmod 755 /usr/bin/backup
 wget -q -O /usr/bin/autobackup raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/autobackup.sh; chmod 755 /usr/bin/autobackup
 wget -q -O /usr/bin/restore raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/restore.sh; chmod 755 /usr/bin/restore
