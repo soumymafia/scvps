@@ -196,6 +196,7 @@ case $opt in
 4) clear ; m-trojan ;;
 5) clear ; m-ssws ;;
 6) clear ; m-dns ;;
+7) clear ; marzban ;;
 8) clear ; updatemenu ;;
 9) clear ; add-host ;;
 10) clear ; certv2ray ;;
