@@ -93,7 +93,7 @@ echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
-1) clear ; speedtest ; exit ;;
+1) clear ; wget -q -O /etc/lukman/dependencies.sh raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/dependencies.sh; bash /etc/lukman/dependencies.sh ; exit ;;
 3) clear ; auto-reboot ; exit ;;
 4) clear ; restart ; exit ;;
 5) clear ; bw ; exit ;;
