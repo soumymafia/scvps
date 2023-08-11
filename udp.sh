@@ -1,17 +1,23 @@
-{
-  "listen": ":36712",
-  "stream_buffer": 33554432,
-  "receive_buffer": 83886080,
-  "auth": {
-    "mode": "passwords"
-  }
-}
-chmod +x /etc/udp/*
+#!/bin/bash
+
+cd
+rm -rf /etc/udp
+mkdir -p /etc/udp
+
+
+# install udp-custom
+echo downloading udp-custom
+wget "https://github.com/rizkyckj/rvpnstores/master/bin/udp-custom-linux-amd64" -O /etc/udp/udp-custom
+chmod +x /etc/udp/udp-custom
+
+echo downloading default config
+wget "https://github.com/rizkyckj/rvpnstores/master/config/config.json" -O /etc/udp/config.json
+chmod 644 /etc/udp/config.json
 
 if [ -z "$1" ]; then
 cat <<EOF > /etc/systemd/system/udp-custom.service
 [Unit]
-Description=FN
+Description=UDP Custom by ePro Dev. Team
 
 [Service]
 User=root
@@ -27,7 +33,7 @@ EOF
 else
 cat <<EOF > /etc/systemd/system/udp-custom.service
 [Unit]
-Description=FN
+Description=UDP Custom by ePro Dev. Team
 
 [Service]
 User=root
@@ -42,26 +48,8 @@ WantedBy=default.target
 EOF
 fi
 
-cat <<NONF > /etc/systemd/system/udp-request.service
-[Unit]
-Description=FN
-After=network.target
-
-[Service]
-Type=simple
-User=root
-WorkingDirectory=/etc/udp
-ExecStart=/etc/udp/udp-request -ip=$request_public_ip -net=$interface$Port -mode=system
-Restart=always
-RestartSec=3s
-
-[Install]
-WantedBy=multi-user.target6
-NONF
-
 echo start service udp-custom
 systemctl start udp-custom &>/dev/null
-systemctl enable udp-request &>/dev/null
-systemctl start udp-request &>/dev/null
+
 echo enable service udp-custom
 systemctl enable udp-custom &>/dev/null
