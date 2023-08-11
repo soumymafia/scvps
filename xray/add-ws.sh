@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script RVPN STORES 
+#Vluks Store
 
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
@@ -36,23 +36,29 @@ export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
 export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
-
 clear
-source /var/lib/scrz-prem/ipvps.conf
-if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
-else
-domain=$IP
-fi
-
-tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
-none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 echo -e "\033[0;34m┌─────────────────────────────────────────────────┐\033[0m"
 echo -e "\\E[0;41;36m            Create Xray/Vmess Account             \E[0m"
 echo -e "\033[0;34m└─────────────────────────────────────────────────┘\033[0m"
+read -p "Username         : " user
+read -p "Quota (GB)       : " quota
+read -p "Max Ip login     : " iplimit
+read -p "Masaaktif        : " masaaktif
+#QUOTA
+if [[ $quota -gt 0 ]]; then
+echo -e "$[$quota * 1024 * 1024 * 1024]" > /etc/funny/limit/vmess/quota/$user
+else
+echo > /dev/null
+fi
+#IPLIMIT
+if [[ $iplimit -gt 0 ]]; then
+echo -e "$iplimit" > /etc/funny/limit/vmess/ip/$user
+else
+echo > /dev/null
+fi
 
-		read -rp "User: " -e user
 		CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
@@ -70,8 +76,6 @@ menu
 	done
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
-read -p "Expired (days): " masaaktif
-read -p "Limit User (GB): " Quota
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmess$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
@@ -85,8 +89,8 @@ asu=`cat<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "bug.com",
-      "port": "443",
+      "add": "${domain}",
+      "port": "8443",
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
@@ -100,7 +104,7 @@ ask=`cat<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "bug.com",
+      "add": "${domain}",
       "port": "80",
       "id": "${uuid}",
       "aid": "0",
@@ -111,63 +115,122 @@ ask=`cat<<EOF
       "tls": "none"
 }
 EOF`
+asi=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "80",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
+      "path": "/worryfree",
+      "type": "none",
+      "host": "${domain}",
+      "tls": "none"
+}
+EOF`
+aso=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "80",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
+      "path": "/kuota-habis",
+      "type": "none",
+      "host": "${domain}",
+      "tls": "none"
+}
+EOF`
 grpc=`cat<<EOF
       {
       "v": "2",
       "ps": "${user}",
       "add": "${domain}",
-      "port": "443",
+      "port": "8443",
       "id": "${uuid}",
       "aid": "0",
       "net": "grpc",
       "path": "vmess-grpc",
       "type": "none",
-      "host": "bug.com",
+      "host": "${domain}",
       "tls": "tls"
 }
 EOF`
-
+ama=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "8443",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
+      "path": "/worryfree",
+      "type": "none",
+      "host": "${domain}",
+      "tls": "tls"
+}
+EOF`
+ami=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "8443",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
+      "path": "/kuota-habis",
+      "type": "none",
+      "host": "${domain}",
+      "tls": "tls"
+}
+EOF`
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
 vmess_base643=$( base64 -w 0 <<< $vmess_json3)
+vmess_base644=$( base64 -w 0 <<< $vmess_json4)
+vmess_base645=$( base64 -w 0 <<< $vmess_json5)
+vmess_base646=$( base64 -w 0 <<< $vmess_json6)
+vmess_base647=$( base64 -w 0 <<< $vmess_json7)
 vmesslink1="vmess://$(echo $asu | base64 -w 0)"
 vmesslink2="vmess://$(echo $ask | base64 -w 0)"
-vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
+vmesslink3="vmess://$(echo $asi | base64 -w 0)"
+vmesslink4="vmess://$(echo $aso | base64 -w 0)"
+vmesslink5="vmess://$(echo $grpc | base64 -w 0)"
+vmesslink6="vmess://$(echo $ama | base64 -w 0)"
+vmesslink7="vmess://$(echo $ami | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-echo -e "${BIBlue}═══════════XRAY/VMESS═══════════${NC}"
-echo -e "${BIBlue}════════════════════════════════${NC}"
-echo -e "Remarks       : ${user}"
-echo -e "User Quota    : ${Quota} GB"
-echo -e "Expired On    : $exp" 
-echo -e "Domain        : ${domain}" 
-echo -e "Port TLS      : 443" 
-echo -e "Port none TLS : 80" 
-echo -e "Port  GRPC    : 443" 
-echo -e "id            : ${uuid}" 
-echo -e "alterId       : 0" 
-echo -e "Security      : auto" 
-echo -e "Network       : ws" 
-echo -e "Path          : /vmess" 
-echo -e "Path          : /worryfree" 
-echo -e "Path          : http://bug/worryfree" 
-echo -e "Path          : /kuota-habis" 
-echo -e "ServiceName   : vmess-grpc" 
-echo -e "${BIBlue}════════════════════════════════${NC}" 
-echo -e "Link TLS : "
-echo -e "${vmesslink1}" 
-echo -e "${BIBlue}════════════════════════════════${NC} "
-echo -e "Link none TLS : "
-echo -e "${vmesslink2}" 
-echo -e "${BIBlue}════════════════════════════════${NC} "
-echo -e "Link GRPC : "
-echo -e "${vmesslink3}"
-echo -e "${BIBlue}════════════════════════════════${NC}" 
-echo -e "${BICyan} Premium VPN Auto Script Service${NC}" 
-echo "" | tee -a /etc/log-create-user.log
-rm /etc/xray/$user-tls.json > /dev/null 2>&1
-rm /etc/xray/$user-none.json > /dev/null 2>&1
+echo -e "══════════════════════════"                 
+echo -e "    <=  VMESS ACCOUNT =>"       
+echo -e "══════════════════════════"                 
+echo -e ""                
+echo -e "Username     : $user"
+echo -e "CITY         : $(cat /root/.mycity)"
+echo -e "ISP          : $(cat /root/.myisp)"
+echo -e "Host/IP      : $domain"
+echo -e "Port ssl/tls : 8443"
+echo -e "Port non tls : 80"                                        
+echo -e "Key          : $uuid"
+echo -e "Network      : ws, grpc"
+echo -e "Path         : /vmess"
+echo -e "Path 0P0K    : /kuota-habis, /worryfree"                    
+echo -e "serviceName  : vmess-grpc"               
+echo -e ""  
+echo -e "══════════════════════════"                 
+echo -e "Link Tls  => ${vmesslink1}"
+echo -e "══════════════════════════"                 
+echo -e "Link None => ${vmesslink2}"
+echo -e "══════════════════════════"                 
+echo -e "Link Grpc => ${vmesslink5}"
+echo -e "══════════════════════════"                 
+echo -e "Expired => $exp"
+echo -e "══════════════════════════"                 
 read -n 1 -s -r -p "Press any key to back on menu"
-
-menu
+funny
