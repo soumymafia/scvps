@@ -14,7 +14,7 @@ echo "================================================"
 echo -n "$bot_token" > /etc/lukman/bot_token 
 echo -n "$chat_id" > /etc/lukman/chat_id
 echo "Done!"
-read -p "Press enter to go back" -n 1; menu-backup
+read -p "Press enter to go back" -n 1; m-dns
 }
 
 clear
