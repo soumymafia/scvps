@@ -171,28 +171,35 @@ echo -e "${BGreen}Done!${NC}"
 sleep 2
 clear
     
-#install SSH
-echo -e "\e[33m-----------------------------------\033[0m"
-echo -e "$BGreen      Install SSH Websocket           $NC"
-echo -e "\e[33m-----------------------------------\033[0m"
-sleep 0.5
+#INSTALL SSH
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|     PROCESS INSTALLED SSH & OPENVPN      |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
 clear
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
-echo -e "\e[33m-----------------------------------\033[0m"
-echo -e "$BGreen          Install XRAY              $NC"
-echo -e "\e[33m-----------------------------------\033[0m"
-sleep 0.5
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|          PROCESS INSTALLED XRAY          |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
 clear
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 #Install Update Menu
-echo -e "\e[33m-----------------------------------\033[0m"
-echo -e "$BGreen        Install update menu            $NC"
-echo -e "\e[33m-----------------------------------\033[0m"
-sleep 0.5
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|           DOWNLOAD UPDATE MENU            |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
 clear
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/update/update.sh && chmod +x update.sh && ./update.sh
+#Install UDP CUSTOM 
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|           DOWNLOAD UDP CUSTOM            |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+clear
+wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/udp.sh && chmod +x udp.sh && ./udp.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
