@@ -15,11 +15,11 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• BACKUP PANEL MENU •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}INSTALL MARZBAN   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RESTORE    $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}BACKUP           ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}BACKUP SETTINGS    $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}INSTALL MARZBAN  $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}CHANGE PW VPS          ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RESTART    $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TUTORIAL ON HOW TO USE"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}INSTALL DEPENDENCIES"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}MARZBAN"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}TUTORIAL ( HARAP DI BACA SEBELUM MENGINSTAL )"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
@@ -29,12 +29,10 @@ echo -e "$COLOR1└────────────────────�
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
 case $opt in
-01 | 1) clear ; autobackup ;;
-02 | 2) clear ; backup ;;
-03 | 3) clear ; restore ;;
-04 | 4) clear ; backup_setting ;;
-05 | 5) clear ; infos ;;
-06 | 6) clear ; wget /etc/lukman/dependencies.sh ;;
+01 | 1) clear ; wget https://raw.githubusercontent.com/rizkyckj/web/main/sslmar.sh && chmod 777 sslmar.sh && ./sslmar.sh ;;
+02 | 2) clear ; nano /root/marzban/env ;;
+03 | 3) clear ; nano /root/marzban/env ;;
+04 | 4) clear ; docker compose down && docker compose up -d ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-backup ;;
 esac
