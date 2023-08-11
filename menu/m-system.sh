@@ -85,7 +85,7 @@ export UNDERLINE="\e[4m"
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"   
 echo -e "  ${WH}[${COLOR1}01${WH}]${NC} ${y}• ${WH}SPEEDTEST" 
-echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${Lred}• ${WH}REBOOT"     
+echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${Lred}• ${WH}yEBOOT"     
 echo -e "  ${WH}[${COLOR1}03${WH}]${NC} ${y}• ${WH}BANNER"   
 echo -e "  ${WH}[${COLOR1}04${WH}]${NC} ${Lred}• ${WH}UPDATE"  
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -94,8 +94,8 @@ read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
 1) clear ; wget -q -O /etc/lukman/dependencies.sh raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/dependencies.sh; bash /etc/lukman/dependencies.sh ; exit ;;
-3) clear ; auto-reboot ; exit ;;
-4) clear ; restart ; exit ;;
+3) clear ; wget -q -O /usr/bin/backup raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/backup.sh; chmod 755 /usr/bin/backup ; exit ;;
+4) clear ; wget -q -O /usr/bin/autobackup raw.githubusercontent.com/rizkyckj/rvpnstores/master/backup/autobackup.sh; chmod 755 /usr/bin/autobackup ; exit ;;
 5) clear ; bw ; exit ;;
 7) clear ; updatemenu; exit ;;
 8) clear ; nano /etc/issue.net ; exit ;;
