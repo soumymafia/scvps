@@ -84,6 +84,7 @@ echo -e "          ➢ Update All Menu"
 echo -e "          ➢ Fix All Bug"
 echo -e "          ➢ New fitur"
 echo -e "          ➢ BACKUP"
+echo -e "          ➢ MARZBAN"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
