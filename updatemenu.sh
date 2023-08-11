@@ -36,6 +36,7 @@ wget -O xp "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/xp.
 wget -O sshws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/sshws.sh"
 wget -O m-dns "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/m-dns.sh"
 wget -q -O /usr/bin/updatemenu "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/updatemenu.sh"
+wget -O marzban "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/menu/marzban.sh"
 
 # vmess
 wget -O add-ws "https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/add-ws.sh"
