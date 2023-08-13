@@ -160,7 +160,7 @@ echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
 echo ""
 clear
-yellow "Add Domain for vmess/vless/trojan dll"
+tyblue "Add Domain for ssh/vmess/vless/trojan dll"
 echo " "
 read -rp "Input ur domain : " -e pp
     if [ -z $pp ]; then
@@ -180,14 +180,14 @@ read -rp "Input ur domain : " -e pp
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|     PROCESS INSTALLED SSH & OPENVPN      |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
-sleep 2
+sleep 3
 clear
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|          PROCESS INSTALLED XRAY          |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
-sleep 2
+sleep 3
 clear
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
@@ -195,14 +195,14 @@ wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/sshws/insshws.
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|           DOWNLOAD UPDATE MENU            |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
-sleep 2
+sleep 3
 clear
 wget https://raw.githubusercontent.com/rizkyckj/premium/master/update.sh && chmod +x update.sh && ./update.sh
 #Install UDP CUSTOM 
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|           DOWNLOAD UDP CUSTOM            |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
-sleep 2
+sleep 3
 clear
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/udp.sh && chmod +x udp.sh && ./udp.sh
 clear
@@ -291,10 +291,10 @@ rm /root/insshws.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e "
 "
-echo -ne "[ ${yell}WARNING${NC} ] Do you want to menu ? (y/n)? "
+echo -ne "[ ${yell}WARNING${NC} ] Do you want to Reboot ? (y/n)? "
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
 exit 0
 else
-menu
+reboot 
 fi
