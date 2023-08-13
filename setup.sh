@@ -164,7 +164,7 @@ echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
 echo ""
 clear
-COLOR1 "Add Domain for ssh/vmess/vless/trojan dll"
+tyblue "Add Domain for ssh/vmess/vless/trojan dll"
 echo " "
 read -rp "Input ur domain : " -e pp
     if [ -z $pp ]; then
