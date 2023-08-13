@@ -155,6 +155,10 @@ else
   exit 0
 fi
 
+echo -e "$BGreen Permission Accepted!$NC"
+sleep 2
+
+
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
