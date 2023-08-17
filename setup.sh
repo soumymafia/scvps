@@ -164,7 +164,7 @@ echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
 echo ""
 clear
-yellow "Add Domain for vmess/vless/trojan dll"
+tyblue "Add Domain for ssh/vmess/vless/trojan dll"
 echo " "
 read -rp "Input ur domain : " -e pp
     if [ -z $pp ]; then
@@ -180,6 +180,7 @@ read -rp "Input ur domain : " -e pp
         echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
     fi
 
+sleep 2
 clear    
 #INSTALL SSH
 echo -e "${tyblue}.------------------------------------------.${NC}"
@@ -196,13 +197,6 @@ sleep 3
 clear
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-#Install Update Menu
-echo -e "${tyblue}.------------------------------------------.${NC}"
-echo -e "${tyblue}|           DOWNLOAD SLOW DNS           |${NC}"
-echo -e "${tyblue}'------------------------------------------'${NC}"
-sleep 3
-clear
-wget https://raw.githubusercontent.com/rizkyckj/premium/master/update.sh && chmod +x update.sh && ./update.sh
 #Install UDP CUSTOM 
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|           DOWNLOAD UDP CUSTOM            |${NC}"
