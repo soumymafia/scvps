@@ -164,7 +164,7 @@ echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
 echo ""
 clear
-tyblue "Add Domain for ssh/vmess/vless/trojan dll"
+tyblue "Add Domain for vmess/vless/trojan dll"
 echo " "
 read -rp "Input ur domain : " -e pp
     if [ -z $pp ]; then
@@ -179,7 +179,8 @@ read -rp "Input ur domain : " -e pp
 	echo $pp > /root/domain
         echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
     fi
-    
+
+clear    
 #INSTALL SSH
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|     PROCESS INSTALLED SSH & OPENVPN      |${NC}"
