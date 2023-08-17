@@ -180,7 +180,7 @@ read -rp "Input ur domain : " -e pp
         echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
     fi
 
-sleep 2
+sleep 1
 clear    
 #INSTALL SSH
 echo -e "${tyblue}.------------------------------------------.${NC}"
