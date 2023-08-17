@@ -90,6 +90,7 @@ echo -e " $COLOR1┌────────────────────
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH} SPEEDTEST  ${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH} RESTART ${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH} BANNER ${NC}                               $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH} FREE DOMAIN${NC}                             $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
@@ -103,6 +104,7 @@ case $opt in
 1) clear ; speedtest ; exit ;;
 2) clear ; restart ; exit ;;
 3) clear ; nano /etc/issue.net ; exit ;;
+4) clear ; wget https://raw.githubusercontent.com/rizkyckj/rvpnstores/master/cf && chmod +x cf && ./cf ; exit ;;
 0) clear ; menu ;; 
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
