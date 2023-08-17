@@ -15,7 +15,7 @@ echo -e " $COLOR1┌────────────────────
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH} INSTALL BOT SSH ( OS UBUNTU )${NC}                     $COLOR1 $NC"                                              
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH} SETTING ${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH} MENU ${NC}
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH} MENU ${NC} $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                 ${WH}• RVPN STORES •${NC}                 $COLOR1 $NC"
