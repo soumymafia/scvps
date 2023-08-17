@@ -215,8 +215,6 @@ clear
 vnstat -m
 echo ""
 read -n 1 -p "Press enter to use menu command or x to exit " titit
-echo ""
-if [ -z $titit ]; then
 menu
 END
 chmod 644 /root/.profile
