@@ -167,8 +167,6 @@ TEXT="RVPN TUNNELING
 ============================
 <code>Domain     :</code> <code>$DOMAIN</code>
 <code>IP Vps     :</code> <code>$MYIP</code>
-<code>User Login :</code> <code>root</code>
-<code>Pass Login :</code> <code>rvpnstores</code>
 <code>Location   :</code> <code>$CITY</code>
 <code>Timezone   :</code> <code>$TIME</code>
 ============================
