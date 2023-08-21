@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 echo "Checking VPS"
 #link izin ip vps
 url_izin='https://raw.githubusercontent.com/rizkyckj/izin/master/izin'
