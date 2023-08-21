@@ -2,7 +2,6 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
-DOMAIN=$( cat /etc/xray/domain )
 ISP=$(wget -qO- ipinfo.io/org)
 CITY=$(curl -s ipinfo.io/city)
 TIME=$(date +'%Y-%m-%d %H:%M:%S')
@@ -197,9 +196,9 @@ CHATID="5667901146"
 KEY="6404993567:AAFSJpLEuKHmEmg4MfoD0qME9Dh4Ijz6Ock"
 WKT="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-TEXT="RVPN TUNNELING 
+TEXT="⚠️AUTOSCRIPT PREMIUM⚠️ 
 ============================
-<code>Domain     :</code> <code>$DOMAIN</code>
+<code>ISP        :</code> <code>$ISP</code>
 <code>IP Vps     :</code> <code>$MYIP</code>
 <code>Location   :</code> <code>$CITY</code>
 <code>Timezone   :</code> <code>$TIME</code>
