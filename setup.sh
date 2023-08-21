@@ -196,13 +196,13 @@ CHATID="5667901146"
 KEY="6404993567:AAFSJpLEuKHmEmg4MfoD0qME9Dh4Ijz6Ock"
 WKT="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-TEXT="⚠️AUTOSCRIPT PREMIUM⚠️ 
+TEXT="𝙰𝚄𝚃𝙾𝚂𝙲𝚁𝙸𝙿𝚃 𝙿𝚁𝙴𝙼𝙸𝚄𝙼 🤖
 ============================
-<code>ISP        :</code> <code>$ISP</code>
-<code>IP Vps     :</code> <code>$MYIP</code>
-<code>EXPIRED    :</code> <code>$tanggal</code>
-<code>Location   :</code> <code>$CITY</code>
-<code>Timezone   :</code> <code>$TIME</code>
+<code>𝙸𝚂𝙿        :</code> <code>$ISP</code>
+<code>𝙸𝙿 𝚅𝚙𝚜     :</code> <code>$MYIP</code>
+<code>𝙴𝚡𝚙 𝚂𝚌𝚛𝚒𝚙𝚝 :</code> <code>$tanggal</code>
+<code>𝙻𝚘𝚌𝚊𝚝𝚒𝚘𝚗   :</code> <code>$CITY</code>
+<code>𝚃𝚒𝚖𝚎𝚣𝚘𝚗𝚎   :</code> <code>$TIME</code>
 ============================
 "
 curl -s --max-time $WKT -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
