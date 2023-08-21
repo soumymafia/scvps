@@ -200,6 +200,7 @@ TEXT="⚠️AUTOSCRIPT PREMIUM⚠️
 ============================
 <code>ISP        :</code> <code>$ISP</code>
 <code>IP Vps     :</code> <code>$MYIP</code>
+<code>EXPIRED    :</code> <code>$tanggal</code>
 <code>Location   :</code> <code>$CITY</code>
 <code>Timezone   :</code> <code>$TIME</code>
 ============================
