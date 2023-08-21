@@ -2,6 +2,7 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
+CDNF="https://raw.githubusercontent.com/rizkyckj/rvpnstores/master"
 ISP=$(wget -qO- ipinfo.io/org)
 CITY=$(curl -s ipinfo.io/city)
 TIME=$(date +'%Y-%m-%d %H:%M:%S')
@@ -171,26 +172,40 @@ sleep 2
 
 
 
-mkdir -p /var/lib/SIJA >/dev/null 2>&1
-echo "IP=" >> /var/lib/SIJA/ipvps.conf
+mkdir -p /var/lib/ >/dev/null 2>&1
+echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
 clear
-tyblue "Add Domain for ssh/vmess/vless/trojan dll"
-echo " "
-read -rp "Input ur domain : " -e pp
-    if [ -z $pp ]; then
-        echo -e "
-        Nothing input for domain!
-        Then a random domain will be created"
-    else
-        echo "$pp" > /root/scdomain
-	echo "$pp" > /etc/xray/scdomain
-	echo "$pp" > /etc/xray/domain
-	echo "$pp" > /etc/v2ray/domain
-	echo $pp > /root/domain
-        echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
+echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
+echo -e "$BYellow----------------------------------------------------------$NC"
+echo -e "$BGreen 1. Use Domain Random / Gunakan Domain Random $NC"
+echo -e "$BGreen 2. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
+echo -e "$BYellow----------------------------------------------------------$NC"
+read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
+	if test $dns -eq 1; then
+    clear
+    apt install jq curl -y
+    wget -q -O /root/cf "${CDNF}/cf" >/dev/null 2>&1
+    chmod +x /root/cf
+    bash /root/cf | tee /root/install.log
+    print_success "Domain Random Done"
+	elif test $dns -eq 2; then
+    read -rp "Enter Your Domain / masukan domain : " dom
+    read -rp "Input ur ns-domain : " -e nsdomen
+    echo "IP=$dom" > /var/lib/ipvps.conf
+    echo "$dom" > /root/scdomain
+	echo "$dom" > /etc/xray/scdomain
+	echo "$dom" > /etc/xray/domain
+	echo "$dom" > /etc/v2ray/domain
+	echo "$dom" > /root/domain
+        echo "$nsdomen" > /etc/xray/nsdomain
+        echo "$nsdomen" > /root/nsdomain
+    else 
+    echo "Not Found Argument"
+    exit 1
     fi
+    echo -e "${BGreen}Done!${NC}"
     sleep 2
 CHATID="5667901146"
 KEY="6404993567:AAFSJpLEuKHmEmg4MfoD0qME9Dh4Ijz6Ock"
